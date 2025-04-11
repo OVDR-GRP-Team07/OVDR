@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eae1ff, #b7c9ffdb);
+  box-sizing: border-box;
+}
+
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.home-container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: max(30px, 5vw);
+  font-weight: bold;
+  animation: rainbow 5s infinite linear;
+  margin-bottom: 10px;
+}
+
+
+@keyframes rainbow {
+  0%   { color: #6a0dad; }
+  25%  { color: #6c29d9; }
+  50%  { color: #7e30c8; }
+  75%  { color: #506cbed8; } /* updated to soft bluish tone */
+  100% { color: #6a0dad; }
+}
+.hero-subtitle {
+  font-size: max(20px, 2vw);
+  color: #6a0dad;
+  margin-bottom: 40px;
+}
+
+
+.loginButton {
+  background: linear-gradient(135deg, #7a48ef, #5279ef);
+  color: white;
+  border: none;
+  padding: 13px 100px;
+  border-radius: 40px;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.loginButton:hover {
+  background: linear-gradient(135deg, #5279ef, #7a48ef);
+  transform: translateY(-2px);
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #4b0082;
+  line-height: 1.6;
+  text-align: center;
+}

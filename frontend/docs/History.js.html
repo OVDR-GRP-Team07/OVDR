@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: History.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: History.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * History.js - Display user's clothing browsing and try-on history.
+ *
+ * @fileoverview Fetches and displays historical clothing interactions for the logged-in user.
+ * Uses the query string, props, or localStorage to determine user identity.
+ *
+ * @author
+ * Peini SHE
+ */
+
+import React, { useState, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import "./History.css";
+
+/**
+ * History component displays the logged-in user's history of clothing interactions.
+ *
+ * @component
+ * @param {Object} props
+ * @param {string} props.username - Current username.
+ * @param {string} props.userId - User ID from props (optional, fallback to URL or localStorage).
+ * @returns {JSX.Element}
+ */
+function History({ username, userId }) {
+    const navigate = useNavigate();
+    const [searchParams] = useSearchParams(); 
+    const urlUserId = searchParams.get("user_id");
+    const storedUserId = localStorage.getItem("user_id");
+    const effectiveUserId = userId || urlUserId || storedUserId;
+    const [historyData, setHistoryData] = useState([]);
+
+  /**
+   * Fetch the user's browsing history from backend API.
+   */
+    useEffect(() => {
+        if (!effectiveUserId || effectiveUserId === "null") {
+            console.warn("Invalid userId detected:", effectiveUserId);
+            setHistoryData([]);
+            return;
+        }
+
+        const fetchHistory = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/get-history?user_id=${effectiveUserId}`);
+                const data = await response.json();
+                
+                if (response.ok &amp;&amp; data.history) {
+                    console.log("Debug | History Data:", data.history);
+                    setHistoryData(data.history);
+                } else {
+                    console.error("Failed to fetch history:", data.error || "No history available");
+                    setHistoryData([]);  
+                }
+            } catch (error) {
+                console.error("Error fetching history:", error);
+                setHistoryData([]); 
+            }
+        };
+
+        fetchHistory();
+    }, [effectiveUserId]); 
+
+    return (
+        &lt;div className="tryon-container">
+            &lt;header className="tryon-header">
+                &lt;h1 className="logo">OVDR &lt;span className="title">{username || "Guest"}'s Browsing History&lt;/span>&lt;/h1>
+                &lt;button className="back-btn" onClick={() => navigate(-1)}>Return&lt;/button>
+            &lt;/header>
+
+            &lt;div className="history-grid">
+                {Array.isArray(historyData) &amp;&amp; historyData.length > 0 ? (
+                    historyData.map((item, index) => (
+                        &lt;div 
+                            className="closet-item" 
+                            key={item.clothing_id || `history-${index}`} 
+                            onClick={() => navigate(`/detail/${item.clothing_id}`, { state: { item } })}
+                        >
+                            &lt;img 
+                                src={item.image} 
+                                alt={item.title} 
+                                className="closet-img" 
+                                onError={(e) => {
+                                    console.error(`Failed to load image: ${item.image}`);
+                                    e.target.src = "/images/placeholder.jpg";
+                                }}
+                            />
+                            &lt;div className="closet-text">
+                                &lt;h3>{item.title.length > 25 ? item.title.slice(0, 22) + "..." : item.title}&lt;/h3>
+                                &lt;p>{item.closet_users} people added this to their Closet&lt;/p>
+                            &lt;/div>
+                        &lt;/div>
+                    ))
+                ) : (
+                    &lt;h2>No history found.&lt;/h2>
+                )}
+            &lt;/div>
+        &lt;/div>
+    );
+};
+
+export default History;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ClothesDetail">ClothesDetail</a></li><li><a href="global.html#FullCloset">FullCloset</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#SaveImage">SaveImage</a></li><li><a href="global.html#TryOn">TryOn</a></li><li><a href="global.html#fetchImageAsBase64">fetchImageAsBase64</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Tue Apr 01 2025 12:14:54 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

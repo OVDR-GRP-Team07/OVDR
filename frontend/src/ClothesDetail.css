@@ -1,0 +1,173 @@
+/* Main content layout */
+.clothes-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px; 
+    margin: 0 auto;
+    padding: 20px; 
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.clothes-image {
+    flex: 1 1 45%;  
+    max-width: 350px; 
+    min-width: 250px;  
+    padding-right: 15px; 
+    box-sizing: border-box;  
+}
+
+.clothes-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px; 
+}
+
+.clothes-info {
+    flex: 1 1 55%; 
+    min-width: 250px;
+    max-width: 500px; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+}
+
+
+.clothes-name {
+    margin-top: 0px;
+    font-size: 25px; 
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.clothes-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.clothes-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; 
+    margin-bottom: 5px;
+}
+
+.tag {
+    background-color: rgba(84, 63, 159, 0.6);
+    color: #ffffff;
+    padding: 5px 10px; 
+    border-radius: 5px;
+    font-size: 15px; 
+}
+
+/* Add to Closet button */
+.add-btn {
+    background-color: #a83232;
+    color: white;
+    font-size: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.add-btn:hover {
+    background-color: #822424;
+}
+
+/* Similar clothes section */
+.similar-clothes {
+    margin-top: -40px;
+    width: 100%;
+}
+
+.similar-clothes h3 {
+    margin-bottom: 5px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.similar-list {
+     display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    overflow: hidden;  /* 隐藏溢出内容 */
+    flex-wrap: nowrap; 
+}
+
+.similar-item {
+    flex: 0 0 auto;             
+    width: 160px;           
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.similar-item:hover {
+    transform: scale(1.05);
+}
+
+.similar-item img {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+.similar-item img:hover {
+    transform: scale(1.05);
+}
+
+.similar-items::-webkit-scrollbar {
+    display: none;
+}
+
+
+.message {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    .similar-list {
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .similar-item {
+      width: calc(50% - 10px);
+    }
+
+    .clothes-image img{
+        padding-top: 50px;
+    }
+
+  }

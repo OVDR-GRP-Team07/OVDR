@@ -1,0 +1,231 @@
+.tryon-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 170px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: calc(100vh - 110px);
+    box-sizing: border-box;
+}
+
+.tryon-result-img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: calc(100vh - 100px);
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.upload-prompt {
+    color: black;
+    position: fixed;
+}
+
+.upload-btn {
+    background: #543f9fd6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.upload-btn:hover {
+    background: #26165ed6;
+}
+
+.change-img-btn {
+    position: fixed;
+    top: 80px;
+    left: 20px;
+    background: #543f9fd6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.change-img-btn:hover {
+    background: #26165ed6;
+}
+
+/* Save & Share Buttons */
+.tryon-actions {
+    position: fixed;
+    left: 20px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.save-btn,
+.continue-btn {
+    background: #543f9fd6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+.save-btn:hover,
+.continue-btn:hover {
+    background: #26165ed6;
+}
+
+.tryon-sidebar {
+    position: fixed;
+    right: 0px;
+    top: 60px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #e0d4fc;
+    padding: 20px 10px;
+    height: calc(100% - 60px);
+    width: 150px;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-btn {
+    background: #543f9fd6;
+    color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    height: 20%;
+}
+
+.sidebar-btn.active,
+.sidebar-btn:hover {
+    background:#26165ed6;
+}
+
+.mycloset-panel,
+.combination-panel,
+.recommendations-panel {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 170px;
+    width: 300px;
+    margin-bottom: 50px;
+    background: #e0d4fc;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    max-height: calc(100vh - 110px);
+    overflow: hidden;
+}
+
+.mycloset-panel h3,
+.combination-panel h3,
+.recommendations-panel h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #000000a3;
+}
+
+.mycloset-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    width: 100%;
+    align-items: center;
+}
+
+.combination-list, 
+.recommendation-list {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-y: auto;
+    height: 100%;
+    width: auto;
+    align-items: center;
+}
+
+
+
+.mycloset-item,
+.combination-item,
+.recommendation-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    width: 220px;
+    height: auto;
+    gap: 10px;
+}
+
+.mycloset-item:hover,
+.combination-item:hover,
+.recommendation-item:hover {
+    transform: scale(1.07);
+    background: #f0f0f0;
+}
+
+.mycloset-img,
+.combination-img,
+.recommendation-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.generate-btn,
+.remove-btn {
+    background: #543f9fd6;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    /* margin-top: 10px; */
+    width: 90px;
+}
+
+.generate-btn:hover {
+    background: #26165ed6;
+}
+
+.remove-btn:hover {
+    background:  #bb2f16;
+}
+
+.mycloset-dropdown {
+    width: auto;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    background: #fff;
+    cursor: pointer;
+}
+
