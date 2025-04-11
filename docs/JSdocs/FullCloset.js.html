@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: FullCloset.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: FullCloset.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * FullCloset.js - View and manage all clothing items in the user's virtual closet.
+ *
+ * @fileoverview Allows searching, filtering by category, and viewing popular recommendations.
+ * Integrates with backend APIs for dynamic content updates and user interaction tracking.
+ *
+ * @author
+ * Peini SHE
+ */
+
+import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import "./FullCloset.css";
+
+/**
+ * FullCloset component renders the full virtual closet interface with category filter, search,
+ * user account dropdown, and popular item sidebar.
+ *
+ * @component
+ * @param {Object} props
+ * @param {string} props.username - Username for greeting in account dropdown.
+ * @param {string} props.userId - ID of the currently logged-in user.
+ * @returns {JSX.Element}
+ */
+const FullCloset = ({ username, userId }) => {
+    const navigate = useNavigate();
+    const timeoutRef = useRef(null);      
+    const storedCategory = sessionStorage.getItem("selectedCategory") || "tops";  // Default category is "tops"
+    
+    const [category, setCategory] = useState(storedCategory); 
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [closetImages, setClosetImages] = useState([]);
+    const [searchingResult, setSearchingResult] = useState([]);
+    const [recommendations, setRecommendations] = useState([]);
+
+    // Retrieve user ID from localStorage if not provided as a prop
+    const storedUserId = localStorage.getItem("user_id");
+    const effectiveUserId = userId || storedUserId;
+    const [error, setError] = useState("");    
+    const [searchQuery, setSearchQuery] = useState("");
+    const [isSearching, setIsSearching] = useState(false);
+       
+    const location = useLocation();
+    const queryParams = new URLSearchParams(location.search);
+    const query = queryParams.get("query"); 
+  
+    useEffect(() => {
+        if (query) {
+          fetch(`http://localhost:5000/search?query=${query}`)
+            .then((res) => res.json())
+            .then((data) => setSearchingResult(data.items || []))
+            .catch(() => setSearchingResult([]));
+          setIsSearching(true);
+        }
+    }, [query]);
+
+    /**
+   * Fetch clothing items from the backend based on selected category.
+   */
+    useEffect(() => {
+        console.log("Checking userId in FullCloset:", effectiveUserId);
+    }, [effectiveUserId]);
+
+    useEffect(() => {
+        if (!effectiveUserId) {
+            console.warn("No userId provided. Unable to fetch closet.");
+            return;
+        }
+
+        const fetchImages = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/api/clothes?category=${category}&amp;user_id=${effectiveUserId}`);
+                const data = await response.json();
+                if (data.items) {
+                    setClosetImages(data.items);
+                    console.log("Fetched images:", data.items);
+                } else {
+                    console.warn("No closet items found.");
+                    setClosetImages([]); // Ensure the state is reset when no items are found
+                }
+            } catch (error) {
+                console.error("Error fetching images:", error);
+                setClosetImages([]); // Ensure UI remains stable even if the fetch fails
+            }
+        };
+        fetchImages();
+    }, [category, effectiveUserId]);
+
+  /**
+   * Fetch top 5 most popular clothing recommendations.
+   */    
+    useEffect(() => {
+        const getRecommendationsPopular = async () => {
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/recommend/popular`);
+                const data = await response.json();
+                if (data.error) {
+                    setError(data.error);
+                    setRecommendations([]);
+                } else {
+                    setRecommendations(data.recommended_popular);
+                    setError("");
+                }
+            } catch (err) {
+                setError("Failed to fetch combinations");
+            }
+        };
+        getRecommendationsPopular();
+    }, []);
+
+  /**
+   * Handles keyword-based search.
+   * @param {KeyboardEvent} e - Keyboard event from input.
+   */
+    const handleSearch = async (e) => {
+        if (e.key === "Enter" &amp;&amp; searchQuery.trim() !== "") {
+            setIsSearching(true);
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/search?query=${searchQuery}`);
+                const data = await response.json();
+                console.log("Search API Response:", data.items);
+                setSearchingResult(data.items || []);
+            } catch (err) {
+                console.error("Search error:", err);
+                setError("Failed to fetch search results");
+                setSearchingResult([]);
+            }
+        }
+    };
+
+    return (
+        &lt;div className="tryon-container">
+            {/* Header */}
+            &lt;header className="tryon-header">
+                &lt;h1 className="logo">OVDR &lt;span className="title">All Clothes&lt;/span>&lt;/h1>
+
+                {/* Search Bar */}
+                &lt;input 
+                    type="text" 
+                    className="search-bar" 
+                    placeholder="Search by keywords to access the clothes you like" 
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onKeyDown={handleSearch}
+                />
+
+                {/* Category Dropdown Selection */}
+                &lt;select className="category-dropdown" value={category} onChange={(e) => {
+                    const newCategory = e.target.value;
+                    setCategory(newCategory);
+                    sessionStorage.setItem("selectedCategory", newCategory); // Store selection in session to persist after navigation
+                }}>
+                    &lt;option value="tops">Tops&lt;/option>
+                    &lt;option value="dresses">Dresses&lt;/option>
+                    &lt;option value="bottoms">Bottoms&lt;/option>
+                &lt;/select>
+
+                {/* Account Dropdown */}
+                &lt;div className="account-container"
+                    onMouseEnter={() => {
+                        if (timeoutRef.current) {
+                            clearTimeout(timeoutRef.current);
+                        }
+                        setShowDropdown(true);}}
+                    onMouseLeave={() => {timeoutRef.current = setTimeout(() => {
+                        setShowDropdown(false);
+                    }, 500);}}
+                >
+                    &lt;button className="account-btn">
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            &lt;path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z">&lt;/path>
+                            &lt;path d="M12 6a3 3 0 1 1-3 3 3 3 0 0 1 3-3ZM6 18a6 6 0 0 1 12 0">&lt;/path>
+                        &lt;/svg>
+                    &lt;/button>
+                    {showDropdown &amp;&amp; (
+                        &lt;div className="account-dropdown">
+                            &lt;div className="account-info">Hello {username}!&lt;/div>
+                            &lt;div className="dropdown-item" onClick={() => navigate(`/history?user_id=${userId}`)}>
+                                View My History 
+                            &lt;/div>
+                            &lt;div className="dropdown-item" onClick={() => navigate("/login")}>Log out&lt;/div>
+                        &lt;/div>
+                    )}
+                &lt;/div>
+
+                &lt;button className="back-btn" onClick={() => navigate("/tryon")}>
+                    Back to dressing room
+                &lt;/button>
+            &lt;/header>
+            
+            {/* Grid Layout for Clothes */}
+            &lt;div className="closet-grid">
+                {isSearching ? (
+                    searchingResult.length > 0 ? (
+                        searchingResult.map((item, index) => (
+                            &lt;div 
+                                className="closet-item" 
+                                key={item.id || `search-${index}`}
+                                onClick={() => navigate(`/detail/${item.id}`, { state: { item, category, userId: effectiveUserId } })}
+                            >
+                                &lt;img src={item.image_path} className="closet-img" alt={item.title} />
+                                &lt;div className="closet-text">
+                                    &lt;h3>{item.title.length > 25 ? item.title.slice(0, 22) + "..." : item.title}&lt;/h3>
+                                    &lt;p>{item.closet_users} people added this to their Closet&lt;/p>
+                                &lt;/div>
+                            &lt;/div>
+                        ))
+                    ) : (
+                        &lt;p>No search results found.&lt;/p>
+                    )
+                ) : (
+                    closetImages.length > 0 ? (
+                        closetImages.map((item, index) => (
+                            &lt;div 
+                                className="closet-item" 
+                                key={item.id || `closet-${index}`} 
+                                onClick={() => navigate(`/detail/${item.id}`, { state: { item, category, userId: effectiveUserId } })}
+                            >
+                                &lt;img 
+                                    src={item.image_path} 
+                                    className="closet-img" 
+                                    alt={item.title}
+                                    onError={(e) => {
+                                        console.error(`Failed to load image: ${item.image_path}`);
+                                        e.target.src = "/images/placeholder.jpg";
+                                    }}
+                                />
+                                &lt;div className="closet-text">
+                                    &lt;h3>{item.title.length > 25 ? item.title.slice(0, 22) + "..." : item.title}&lt;/h3>
+                                    &lt;p>{item.closet_users} people added this to their Closet&lt;/p>
+                                &lt;/div>
+                            &lt;/div>
+                        ))
+                    ) : (
+                        &lt;p>No items found.&lt;/p>  
+                    )  
+                )}
+            &lt;/div>
+
+            {/* Popular Clothes Sidebar */}
+            &lt;div className="popular-list">
+                &lt;h3>Top 5 Popular Items&lt;/h3>
+                {recommendations.length > 0 ? (
+                    recommendations.map((item) => (
+                        &lt;div 
+                            className="popular-item" 
+                            key={item.id} 
+                            onClick={() => navigate(`/detail/${item.id}`, { state: { item, category, userId: effectiveUserId } })}
+                        >
+                            &lt;img 
+                                src={item.url} 
+                                alt={item.title} 
+                                className="popular-img"
+                                onError={(e) => {
+                                    console.error(`Failed to load image: ${item.image_path}`);
+                                    e.target.src = "/images/placeholder.jpg";
+                                }}
+                            />
+                        &lt;/div>
+                    ))
+                ) : (
+                    &lt;p>No recommendations found.&lt;/p>
+                )}
+            &lt;/div>
+
+            &lt;footer className="tryon-footer">
+            &lt;a href="http://cslinux.nottingham.edu.cn/~Team202407/">About Us&lt;/a>
+                &lt;a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy&lt;/a>
+                &lt;a href="/docs/user_manual.pdf" target="_blank" rel="noopener noreferrer">Manual&lt;/a>
+                &lt;a href="/contact.html">Help and Contact&lt;/a>
+                &lt;p>Developed by TEAM2024.07&lt;/p>
+            &lt;/footer>
+        &lt;/div>
+    );
+};
+
+export default FullCloset;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ClothesDetail">ClothesDetail</a></li><li><a href="global.html#FullCloset">FullCloset</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#SaveImage">SaveImage</a></li><li><a href="global.html#TryOn">TryOn</a></li><li><a href="global.html#fetchImageAsBase64">fetchImageAsBase64</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Tue Apr 01 2025 12:14:54 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

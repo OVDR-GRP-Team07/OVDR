@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: TryOn.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: TryOn.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * TryOn.js - Virtual dressing room component for mixing and matching clothing.
+ *
+ * @fileoverview Provides try-on functionality, including uploading personal images,
+ * generating AI-assisted outfit previews, managing virtual closets, saving combinations,
+ * viewing recommendations, and navigating the user interface.
+ *
+ * @authors
+ * - Peini SHE: Initial implementation and layout, reccomendation and result image presentation 
+ * - Zhihao CAO: Image generation workflow, result image rendering, combination save and show
+ * - Zixin DING:
+ *    - Implemented clothing closet panel (category filtering, removal)
+ *    - Implemented combination panel (delete combination, display result image on click)
+ *    - Implemented search bar interaction (enter-to-search routing)
+ *
+ * @description
+ * This component is the core UI for the virtual try-on experience. It integrates frontend interaction
+ * with the backend API for image processing (StableVITON), clothing management, and personalization.
+ */
+
+import { useNavigate } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import "./TryOn.css";
+
+/**
+ * TryOn component allows users to preview clothing on their own image, manage closet, and save looks.
+ *
+ * @component
+ * @param {Object} props
+ * @param {string} props.username - Current username.
+ * @param {string} props.userId - ID of the logged-in user.
+ * @param {string|null} props.uploadedImage - User's uploaded image for try-on.
+ * @param {Function} props.setUploadedImage - Setter for uploaded image.
+ * @param {string|null} props.resultImage - Resulting AI-generated image.
+ * @param {Function} props.setResultImage - Setter for generated result image.
+ * @returns {JSX.Element}
+ */
+function TryOn({ username, userId, uploadedImage, setUploadedImage, resultImage, setResultImage }) {
+    const navigate = useNavigate();
+    const timeoutRef = useRef(null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    
+    const [myCloset, setMyCloset] = useState([]);
+    const [combinations, setCombinations] = useState([]);
+    const [recommendations, setRecommendations] = useState([]);
+    const [selectedCategory, setSelectedCategory] = useState("tops"); 
+    const [searchQuery, setSearchQuery] = useState("");
+    const [error, setError] = useState("");
+
+    const [activePanel, setActivePanel] = useState(null);
+
+    const handleSearch = (e) => {
+        if (e.key === "Enter" &amp;&amp; searchQuery.trim() !== "") {
+          navigate(`/fullcloset?user_id=${userId}&amp;query=${encodeURIComponent(searchQuery)}`);
+        }
+    };
+
+    /**
+   * Toggle visibility of side panels like closet, combinations, and recommendations.
+   * @param {string} panelName - The name of the panel to toggle.
+   */
+    const togglePanel = (panelName) => {
+        setActivePanel((prevPanel) => (prevPanel === panelName ? null : panelName));
+    };
+
+    // modified by Zixin Ding: Fix url problem
+    // added by Zhihao Cao --->process image and represent the result
+    // auto upload without any aother operation---> useEffect
+    // tips: the default value of isGenerating is false
+    const [isGenerating, setIsGenerating] = useState(false); //generate button must be disabled when generating
+
+
+ /**
+   * Send clothing and user image to backend for generating a virtual try-on preview.
+   * @param {string} itemUrl - URL of the selected clothing image.
+   * @param {string} itemCategory - Category of clothing (e.g., tops, dresses).
+   */
+
+    const handleGenerateImage = async (itemId,itemUrl,itemCategory) => { //itemUrl is the url of the item in the closet
+        
+        setIsGenerating(true); // disable the button
+        if (!uploadedImage) {
+            console.error("failed to get user_image");
+            window.alert("Please upload your image first"); // alert notification
+            return;
+        }
+        // use document notice to replace the windows.alert() [need user to respond]
+        const loadingMessage = document.createElement('div');
+        loadingMessage.textContent = "Please wait while the image is being generated...";
+        loadingMessage.style.position = 'fixed';
+        loadingMessage.style.top = '50%';
+        loadingMessage.style.left = '50%';
+        loadingMessage.style.transform = 'translate(-50%, -50%)';
+        loadingMessage.style.padding = '10px';
+        loadingMessage.style.backgroundColor = '#000';
+        loadingMessage.style.color = '#fff';
+        loadingMessage.style.zIndex = '9999'; // ensure the message is on top of other elements
+        document.body.appendChild(loadingMessage);
+        try {
+            const response = await fetch("http://localhost:5000/process_image", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                mode: "cors",
+                // TODO: wait for the user_id to be added
+                body: JSON.stringify({
+                    item_id: itemId,
+                    cloth_url: itemUrl, 
+                    user_id: userId,
+                    item_category:itemCategory
+                }),
+            });
+            document.body.removeChild(loadingMessage);
+            // After consideration: there is no waiting ui for the user to pick the clothes
+            const result = await response.json();
+
+            if(!response.ok) {
+                
+                window.alert("failed to generate"); // alert 
+                return;
+            } 
+            
+            // TODO: change resultImage into stable-viton result
+            //tips: use "`" to represent the result instead of '' or " "
+            const uploadedImager = `/show_image/${userId}/${result.image_path}`;
+            setResultImage(uploadedImager);
+    
+        } catch (error) {
+            document.body.removeChild(loadingMessage);
+            window.alert(error.message);
+        } finally {
+            setIsGenerating(false); // re-enable the button
+        }
+    };
+
+  /**
+   * Auto-fetch user's uploaded image from backend if not set.
+   */
+    useEffect(() => {
+        const fetchUserImage = async () => {
+            if (!userId || uploadedImage) return;
+    
+            try {
+                const response = await fetch(`http://localhost:5000/get_user_info?user_id=${userId}`);
+                const data = await response.json();
+                if (response.ok &amp;&amp; data.image_path) {
+                    const fixedPath = data.image_path.replace(/\\/g, "/");  // Windows fix
+                    const fullUrl = `http://localhost:5000/${fixedPath}`;
+                    setUploadedImage(fullUrl);
+                }
+            } catch (error) {
+                console.error("Failed to fetch user image", error);
+            }
+        };
+    
+        fetchUserImage();
+    }, [userId, uploadedImage]);
+    
+
+  /**
+   * Fetch closet items by selected category.
+   */
+// Added by Zixin Ding
+    useEffect(() => {
+        if (!userId) {
+            console.warn("No userId provided. Unable to fetch closet.");
+            return;
+        }
+
+        const fetchCloset = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/get-closet?user_id=${userId}&amp;category=${selectedCategory}`);
+                const data = await response.json();
+
+                if (data.error) {
+                    setError(data.error);
+                    setMyCloset([]);
+                } else {
+                    setMyCloset(data.closet);
+                    setError("");
+                }
+            } catch (err) {
+                setError("Failed to fetch closet items");
+            }
+        };
+
+        fetchCloset();
+    }, [selectedCategory, userId]);  // Monitor category change
+
+
+  /**
+   * Remove a clothing item from the user's closet.
+   * @param {string} clothingId - ID of the clothing to remove.
+   */
+    // Added by Zixin Ding
+    const handleRemoveFromCloset = async (clothingId) => {
+        try {
+            const response = await fetch("http://localhost:5000/remove-from-closet", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ user_id: userId, clothing_id: clothingId }),
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                setMyCloset(myCloset.filter(item => item.id !== clothingId));  
+            } else {
+                setError(result.error);
+            }
+        } catch (error) {
+            setError("Failed to remove item.");
+        }
+    };
+
+  /**
+   * Save a clothing combination with optional result image.
+   */
+    const handleSaveCombination = async () => {
+        // if (!resultImage) {
+        //     console.error("No outfit image available");
+        //     return;
+        // }
+        // authored by Zhihao Cao
+        const selectedTop = myCloset.find(item => item.category === "tops")?.id || null;
+        const selectedBottom = myCloset.find(item => item.category === "bottoms")?.id || null;
+        const selectedDress = myCloset.find(item => item.category === "dresses")?.id || null;
+        if (!resultImage) {
+            window.alert("please try on firstly")
+            return;
+        }
+        const response = await fetch("http://127.0.0.1:5000/save-combination", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                user_id: userId,
+                top_id: selectedTop,
+                bottom_id: selectedBottom,
+                dress_id: selectedDress,
+                // TODO: fix to true result
+                resultImage: resultImage
+            })
+        });
+        const data = await response.json();
+        if (!response.ok) {
+            window.alert("save failed")
+            return;
+        }
+        console.log("Saved outfit:", data);
+
+        if (response.ok) {
+            setCombinations(prev => [...prev, { id: data.id, image: data.url }]);
+            window.alert(data.message); 
+            if (data.message === "Combination saved!") {
+                setCombinations(prev => [...prev, { id: data.id, image: data.url }]);
+            }
+        }
+    }
+
+  /**
+   * Load previously saved clothing combinations.
+   */
+    useEffect(() => {
+        if (!userId) {
+            console.warn("No userId provided. Unable to fetch combinations.");
+            return;
+        }
+
+        const getCombinations = async () => {
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/get-combinations?user_id=${userId}`);
+                const data = await response.json();
+                if (data.error) {
+                    setError(data.error);
+                    setCombinations([]);
+                } else {
+                    setCombinations(data.combinations);
+                    setError("");
+                }
+            } catch (err) {
+                setError("Failed to fetch combinations");
+            }
+        };
+        getCombinations();
+    }, [userId]); 
+
+  /**
+   * Fetch personalized clothing recommendations.
+   */
+    useEffect(() => {
+        if (!userId) {
+            console.warn("No userId provided. Unable to fetch recommendations.");
+            return;
+        }
+
+        const getRecommendationsPersonal = async () => {
+            try {
+                const response = await fetch(`http://127.0.0.1:5000/recommend/user/${userId}`);
+                const data = await response.json();
+                if (data.error) {
+                    setError(data.error);
+                    setRecommendations([]);
+                } else {
+                    setRecommendations(data.personalized_recommendations);
+                    setError("");
+                }
+            } catch (err) {
+                setError("Failed to fetch recommendations");
+            }
+        };
+        getRecommendationsPersonal();
+    }, [userId]);
+
+    const handleDeleteCombination = async (combinationId) => {
+        try {
+            const response = await fetch("http://localhost:5000/delete-combination", {
+                method: "DELETE",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ id: combinationId }),
+            });
+    
+            const result = await response.json();
+            if (response.ok) {
+                setCombinations(prev => prev.filter(c => c.id !== combinationId));
+                window.alert("Deleted successfully!");
+            } else {
+                window.alert(result.error || "Failed to delete combination");
+            }
+        } catch (error) {
+            window.alert("Request failed: " + error.message);
+        }
+    };
+    
+
+
+    return (
+        &lt;div className="tryon-container">
+            {/* Header */}
+            &lt;header className="tryon-header">
+                &lt;h1 className="logo">OVDR&lt;/h1>
+                &lt;input 
+                    type="text" 
+                    className="search-bar" 
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onKeyDown={handleSearch}
+                    placeholder="Search by keywords to access the clothes you like" 
+                />
+
+                {/* Account Dropdown */}
+                &lt;div
+                    className="account-container"
+                    onMouseEnter={() => {
+                        if (timeoutRef.current) {
+                            clearTimeout(timeoutRef.current);
+                        }
+                        setShowDropdown(true);}}
+                    onMouseLeave={() => {timeoutRef.current = setTimeout(() => {
+                        setShowDropdown(false);
+                    }, 500);}}
+                >
+                    &lt;button className="account-btn">
+                        &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            &lt;path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Z">&lt;/path>
+                            &lt;path d="M12 6a3 3 0 1 1-3 3 3 3 0 0 1 3-3ZM6 18a6 6 0 0 1 12 0">&lt;/path>
+                        &lt;/svg>
+                    &lt;/button>
+                    {showDropdown &amp;&amp; (
+                        &lt;div className="account-dropdown">
+                            &lt;div className="account-info">Hello {username}!&lt;/div>
+                            &lt;div className="dropdown-item" onClick={() => navigate(`/history?user_id=${userId}`)}>
+                                View My History 
+                            &lt;/div>
+                            &lt;div className="dropdown-item" onClick={() => navigate("/login")}>Log out&lt;/div>
+                        &lt;/div>
+                    )}
+                &lt;/div>
+            &lt;/header>
+
+            {/* Display uploaded image or prompt user to upload */}
+            &lt;div className="tryon-content">
+                {uploadedImage ? (
+                    &lt;>
+                        &lt;button className="change-img-btn" onClick={() => navigate("/upload")}>Change Image&lt;/button>
+                        &lt;div className="tryon-display">
+                            {/* Display uploaded image (result first)*/}
+                            &lt;img src={resultImage||uploadedImage} alt="Try on result" className="tryon-result-img" />
+                        &lt;/div>
+                        &lt;div className="tryon-actions">
+                            &lt;button className="save-btn" onClick={handleSaveCombination}>Save Combination&lt;/button>
+                            &lt;button className="continue-btn" onClick={() => navigate("/download")}>Send to Email&lt;/button>
+                        &lt;/div>
+                    &lt;/>
+                ) : (
+                    &lt;div className="upload-prompt">
+                        &lt;h2 className="tryon-placeholder">You haven't uploaded a full-body image yet.&lt;/h2>
+                        &lt;p>Please upload one now to start using the virtual dressing room.&lt;/p>
+                        &lt;button className="upload-btn" onClick={() => navigate("/upload")}>Upload Image&lt;/button>
+                    &lt;/div>
+                )}
+            &lt;/div>
+
+            {/* Sidebar */}
+            &lt;aside className="tryon-sidebar">
+                &lt;button className={`sidebar-btn ${activePanel === "closet" ? "active" : ""}`}
+                        onClick={() => togglePanel("closet")}
+                >
+                    My Closet
+                &lt;/button>
+                &lt;button className={"sidebar-btn"}
+                        onClick={() => navigate(`/fullcloset?user_id=${userId}`)}
+                >
+                    View All Clothes
+                &lt;/button>
+                &lt;button className={`sidebar-btn ${activePanel === "combinations" ? "active" : ""}`}
+                        onClick={() => togglePanel("combinations")}
+                >
+                    Saved Combinations
+                &lt;/button>
+                &lt;button className={`sidebar-btn ${activePanel === "recommendations" ? "active" : ""}`}
+                        onClick={() => togglePanel("recommendations")}
+                >
+                    Explore Recommendations
+                &lt;/button>
+            &lt;/aside>
+
+            {/* Closet Panel */}
+            {activePanel === "closet" &amp;&amp; (
+                &lt;div className="mycloset-panel">
+                    &lt;h3>My Try-On Closet&lt;/h3>
+                    &lt;select
+                        className="mycloset-dropdown"
+                        value={selectedCategory}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                    >
+                        &lt;option value="tops">Tops&lt;/option>
+                        &lt;option value="dresses">Dresses&lt;/option>
+                        &lt;option value="bottoms">Bottoms&lt;/option>
+                    &lt;/select>
+
+                    {error &amp;&amp; &lt;p className="error-message">{error}&lt;/p>}
+
+                    &lt;ul className="mycloset-list">
+                        {myCloset.length > 0 ? (
+                            myCloset.map((item) => (
+                                &lt;li key={item.id} className="mycloset-item">
+                                    &lt;img src={item.url} alt="Clothing" className="mycloset-img"/>
+                                        {/*added by zhihao Cao ---> generate the image button*/}
+                                         &lt;button className="generate-btn" onClick={(e) =>
+                                            {
+                                                if(isGenerating) {
+                                                    window.alert("Please wait for the image to be generated");
+                                                    e.stopPropagation();
+                                                    return;
+                                                }
+                                                handleGenerateImage(item.id,item.url,item.category) /* Prevents the button from being clicked more than once*/
+                                            }
+                                        }
+                                            disabled={isGenerating}
+                                        >
+                                            {isGenerating ? "Generating..." : "Tryon"}
+                                        &lt;/button>
+
+                                    {/*end*/}
+                                    &lt;button className="remove-btn" onClick={() => handleRemoveFromCloset(item.id)}>Remove&lt;/button>
+                                &lt;/li>
+                            ))
+                        ) : (
+                            &lt;p>No items found for this category.&lt;/p>
+                        )}
+                    &lt;/ul>
+                &lt;/div>
+            )}
+
+            {/* Combinations Panel */}
+            {activePanel === "combinations" &amp;&amp; (
+                &lt;div className="combination-panel">
+                    &lt;h3>My Combinations&lt;/h3>
+                    &lt;ul className="combination-list">
+                        {combinations.length > 0 ? (
+                            combinations.map((item) => (
+                                &lt;li key={item.id} className="combination-item">
+                                  &lt;img
+                                    src={item.url}
+                                    alt="combination"
+                                    className="combination-img"
+                                    onClick={() => setResultImage(item.url)}  // ✅ 只点击图片才设置为主图
+                                    style={{ cursor: "pointer" }}
+                                  />
+                                  &lt;button
+                                    className="remove-btn"
+                                    onClick={() => handleDeleteCombination(item.id)}
+                                  >
+                                    Delete
+                                  &lt;/button>
+                                &lt;/li>
+                              ))
+                        ): (
+                            &lt;p>No saved combinations.&lt;/p>
+                        )}
+                    &lt;/ul>
+                &lt;/div>
+            )}
+
+            {/* Recommendations Panel */}
+            {activePanel === "recommendations" &amp;&amp; (
+                &lt;div className="recommendations-panel">
+                    &lt;h3>People like you also prefer&lt;/h3>
+                    &lt;ul className="recommendation-list">
+                        {recommendations.map((item) => (
+                            &lt;li key={item.id} className="recommendation-item" onClick={() => navigate(`/detail/${item.id}`, { state: { item }})}>
+                                &lt;img src={item.url} alt="recommends" className="recommendation-img"/>
+                            &lt;/li>
+                        ))}
+                    &lt;/ul>
+                &lt;/div>
+            )}
+
+            {/* Footer */}
+            &lt;footer className="tryon-footer">
+            &lt;a href="http://cslinux.nottingham.edu.cn/~Team202407/">About Us&lt;/a>
+                &lt;a href="/privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy&lt;/a>
+                &lt;a href="/docs/user_manual.pdf" target="_blank" rel="noopener noreferrer">Manual&lt;/a>
+                &lt;a href="/contact.html">Help and Contact&lt;/a>
+                &lt;p>Developed by TEAM2024.07&lt;/p>
+            &lt;/footer>
+        &lt;/div>
+    );
+}
+
+export default TryOn;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ClothesDetail">ClothesDetail</a></li><li><a href="global.html#FullCloset">FullCloset</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#SaveImage">SaveImage</a></li><li><a href="global.html#TryOn">TryOn</a></li><li><a href="global.html#fetchImageAsBase64">fetchImageAsBase64</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Tue Apr 01 2025 12:14:54 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

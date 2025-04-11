@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OVDR Installation Manual</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 40px;
+      background-color: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #4B0082;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", monospace;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>OVDR Installation Manual</h1>
+
+  <section>
+    <h2>Prerequisites</h2>
+  <ul>
+    <li><a href="https://developer.nvidia.com/cuda-toolkit-archive">NVIDIA CUDA</a></li>
+    <li><a href="https://nodejs.org/">Node.js</a> (v18+)</li>
+    <li><a href="https://www.python.org/downloads/">Python</a> (3.8+)</li>
+    <li><a href="https://www.anaconda.com/download">Anaconda</a> and Add to Path</li>
+  </ul>
+  
+  <p><strong>⚠️ The following tools are <em>optional or will be installed later in the guide</em>:</strong></p>
+  <ul>
+    <li><a href="https://www.mysql.com/">MySQL</a> *(Optional – Only required if you plan to deploy the database locally. See <a href="#5---set-up-mysql-optional-for-local-database-only">Step 5</a>)</li>
+    <li><a href="https://visualstudio.microsoft.com/visual-cpp-build-tools">Visual C++ Build Tools</a> *(Required during Detectron2 setup. See <a href="#3---prepare-ai-models-stableviton--clip">Step 3</a>)</li>
+  </ul>
+  </section>
+  
+  <section>
+    <h2>Step 1 - Clone the Repository</h2>
+    <pre><code>git clone https://csprojects.nottingham.edu.cn/grp-team07-gitlab/grp-team07-gitlab-work.git
+  cd grp-team07-gitlab-work</code></pre>
+  </section>
+  
+  <section>
+    <h2>Step 2 - Backend Setup</h2>
+    <pre><code>conda create -n OVDR python=3.10 -y
+      conda activate OVDR
+      pip install -r requirements.txt
+      
+      conda create -n StableViton python=3.10 -y
+      conda activate StableVITON
+      pip install -r requirements.txt</code></pre>
+  </section>
+  
+  <section>
+    <h2>Step 3 - AI Models Setup</h2>
+    <pre><code>conda activate StableVITON
+      cd backend
+      mkdir models
+      cd models
+      
+      # Install Triton (for Windows)
+      git clone https://github.com/PrashantSaikia/Triton-for-Windows
+      cd Triton-for-Windows
+      pip install triton-2.0.0-cp310-cp310-win_amd64.whl
+      cd ..
+      
+      # Download clip-vit-large-patch14
+      git clone https://huggingface.co/openai/clip-vit-large-patch14
+      
+      # Download StableVITON (ensure Git LFS is installed)
+      git lfs install
+      git clone https://huggingface.co/spaces/rlawjdghek/StableVITON
+      
+      # Download StavleVITON models
+      go to https://huggingface.co/spaces/rlawjdghek/StableVITON/tree/main
+      to download the checkpoints dir alone
+      https://huggingface.co/spaces/rlawjdghek/StableVITON/tree/main
+      download the checkpoints dir alone</code></pre>
+      
+      <h3>Detectron2 for DensePose</h3>
+      <p>To install <code>detectron2</code> and <code>DensePose</code> on Windows, make sure <strong>Visual Studio Build Tools</strong> are installed:</p>
+      <ol>
+        <li><a href="https://visualstudio.microsoft.com/visual-cpp-build-tools">Download Visual C++ Build Tools</a></li>
+        <li>Select <strong>Visual Studio Build Tools 2019</strong></li>
+        <li>In the installer, check:
+          <ul>
+            <li>✅ <strong>MSVC</strong> (latest version, under “Single Component”)</li>
+            <li>✅ <strong>Desktop development with C++</strong> workload</li>
+          </ul>
+        </li>
+        <li>Install and restart your terminal.</li>
+      </ol>
+    
+      <h3>Now install <code>detectron2</code> and <code>DensePose</code>:</h3>
+      <p><strong>💡 Important:</strong> Use <strong>x64 Native Tools Command Prompt for VS 2019</strong>, not regular <code>cmd</code> or <code>PowerShell</code></p>
+      <pre><code># Clone detectron2 repository
+    git clone https://github.com/facebookresearch/detectron2.git
+    
+    # Activate your environment
+    conda activate StableViton
+    
+    # Navigate to Detectron2 repo
+    cd your_store_project_path/backend/models/detectron2/
+    
+    # Install detectron2
+    set DISTUTILS_USE_SDK=1 && pip install .
+    
+    # Install DensePose
+    cd ./projects/DensePose
+    set DISTUTILS_USE_SDK=1 && pip install .</code></pre>
+  </section>
+  
+  <section>
+    <h2>Step 4 - Frontend Setup</h2>
+    <pre><code>cd frontend
+  npm install
+  npm install concurrently wait-on --save-dev</code></pre>
+  </section>
+  
+  <section>
+    <h2>Step 5 - Set Up MySQL (Optional for Local Try-On Only)</h2>
+    <pre><code>CREATE DATABASE ovdr CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;</code></pre>
+    <pre><code>mysql -u root -p ovdr < backend/database/ovdr_structure.sql
+  mysql -u root -p ovdr < backend/database/ovdr_data_only.sql</code></pre>
+    <p>Edit your <code>.env</code> file in <code>./backend</code>:</p>
+    <pre><code>USER_NAME=root
+  PASSWORD=yourpassword
+  HOSTNAME=127.0.0.1
+  PORT=3306
+  DATABASE=ovdr</code></pre>
+  </section>
+  
+  <section>
+    <h2>Step 6 - Run the Application</h2>
+    <pre><code>cd frontend
+  conda activate OVDR
+  npm run dev</code></pre>
+  <p>If you encounter the error:</p>
+  <pre><code>[0] Invalid options object. Dev Server has been initialized using an options object that does not match the API schema.  
+[0] - options.allowedHosts[0] should be a non-empty string.</code></pre>
+  <p><strong>Solution:</strong> Please modify the /frontend/node_modules/react-scripts/config/webpackDevServer.config.js file and change the allowedHosts configuration on line 46 to:</p>
+  <pre><code>allowedHosts: "all",</code></pre>
+  </section>
+  
+  <section>
+    <h2>Step 7 - Troubleshooting</h2>
+
+    <h3>1 - Error: ModuleNotFoundError</h3>
+    <p></strong> Try running the following command again:<pre><code>pip install -r requirements.txt</code></pre></p>
+
+    <h3>Error: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE</h3>
+    <p>If you see an error like:</p>
+    <pre><code>ERROR: THESE PACKAGES DO NOT MATCH THE HASHES FROM THE REQUIREMENTS FILE. torch==2.0.1+cu117 from https://download.pytorch.org/... Expected sha256 ... Got ...</code></pre>
+    <p><strong>Solution 1 – Manually download and install the correct PyTorch wheels:</strong></p>
+  <ol>
+    <li>Visit: <a href="https://download.pytorch.org/whl/cu117">https://download.pytorch.org/whl/cu117</a></li>
+    <li>Download the matching .whl files for your Python version (e.g. <code>cp310</code> for Python 3.10):
+      <ul>
+        <li><code>torch-2.0.1+cu117-cp310-cp310-win_amd64.whl</code></li>
+        <li><code>torchvision-0.15.2+cu117-cp310-cp310-win_amd64.whl</code></li>
+        <li><code>torchaudio-2.0.2-cp310-cp310-win_amd64.whl</code></li>
+      </ul>
+    </li>
+    <li>Run:</li>
+    <pre><code>pip install torch-*.whl torchvision-*.whl torchaudio-*.whl</code></pre>
+  </ol>
+  </section>
+  
+  <p><strong>The backend runs at <code>http://localhost:5000</code>, and the frontend at <code>http://localhost:3000</code>.</strong></p>
+  </body>
+  </html>
+  

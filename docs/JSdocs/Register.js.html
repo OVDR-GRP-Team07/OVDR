@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: Register.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: Register.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Register.js - User registration page for Online Virtual Dressing Room (OVDR).
+ *
+ * @fileoverview Handles new user signup, form validation, and backend communication.
+ * Redirects to login page upon successful registration.
+ *
+ * @author
+ * Zixin DING
+ */
+
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "./Login.css";
+
+/**
+ * Register component allows users to sign up for an account.
+ *
+ * @component
+ * @returns {JSX.Element}
+ */
+function Register() {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+    const [passwordConfirm, setPasswordConfirm] = useState("");
+    const [message, setMessage] = useState("");
+    const [showPopup, setShowPopup] = useState(false);
+    const navigate = useNavigate();
+
+  /**
+   * Handle registration submission with field validation.
+   * If success, redirect to login page after brief delay.
+   *
+   * @param {React.FormEvent} e - Form submission event
+   */
+    const handleRegister = async (e) => {
+        e.preventDefault(); 
+
+        if (password !== passwordConfirm) {
+            setMessage("Passwords do not match.");
+            setShowPopup(true);
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append("username", username);
+        formData.append("password", password);
+        formData.append("password_confirm", passwordConfirm);
+
+        try {
+            const response = await fetch("http://127.0.0.1:5000/register", {
+                method: "POST",
+                body: formData,
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                setMessage("Registration successful! Redirecting to login...");
+                setShowPopup(true);
+                setTimeout(() => navigate("/login"), 2000);
+            } else {
+                setMessage(data.error);
+                setShowPopup(true);
+            }
+        } catch (error) {
+            console.error("Registration failed:", error);
+            setMessage(`Error: ${error.message || "Unable to register. Please try again."}`);
+            setShowPopup(true);
+        }
+    };
+
+    return (
+        &lt;div className="login-container">
+            {showPopup &amp;&amp; (
+                &lt;div className="popup">
+                    &lt;div className="popup-content">
+                        &lt;p>{message}&lt;/p>
+                    &lt;/div>
+                &lt;/div>
+            )}
+            &lt;h1 className="login">Register&lt;/h1>
+            &lt;form onSubmit={handleRegister}>
+                &lt;input
+                    className="textbox"
+                    type="text"
+                    placeholder="Username length must be 3 to 20 characters"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                />
+                &lt;input
+                    className="textbox"
+                    type="password"
+                    placeholder="Password length must be 6 to 20 characters"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                &lt;input
+                    className="textbox"
+                    type="password"
+                    placeholder="Confirm Password"
+                    value={passwordConfirm}
+                    onChange={(e) => setPasswordConfirm(e.target.value)}
+                    required
+                />
+                &lt;button type="submit" className="login-button">Register&lt;/button>
+            &lt;/form>
+            &lt;p className="register-option">
+                Already have an account? &lt;a href="/login">Login&lt;/a>
+            &lt;/p>
+        &lt;/div>
+    );
+}
+
+export default Register;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#ClothesDetail">ClothesDetail</a></li><li><a href="global.html#FullCloset">FullCloset</a></li><li><a href="global.html#History">History</a></li><li><a href="global.html#Home">Home</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Register">Register</a></li><li><a href="global.html#SaveImage">SaveImage</a></li><li><a href="global.html#TryOn">TryOn</a></li><li><a href="global.html#fetchImageAsBase64">fetchImageAsBase64</a></li><li><a href="global.html#root">root</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.4</a> on Tue Apr 01 2025 12:14:54 GMT+0800 (中国标准时间)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

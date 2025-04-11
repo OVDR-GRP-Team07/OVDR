@@ -1,0 +1,2122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Report</title>
+    <style>
+        body { font-family: "Segoe UI", sans-serif; margin: 40px; background-color: #fdfdfd; color: #333; line-height: 1.6; }
+        h1, h2, h3, h4 { color: #4B0082; }
+        pre { background: #f4f4f4; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        code { font-family: "Courier New", monospace; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #eee; }
+        a { color: #4B0082; }
+    </style>
+</head>
+<body>
+<h1 id="code-report">Code Report</h1>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ul>
+<li><a href="#1-project-overview">1. Project Overview</a></li>
+<li><a href="#2-technology-stack">2. Technology Stack</a></li>
+<li><a href="#3-project-structure">3. Project Structure</a></li>
+<li><a href="#4-frontend-architecture">4. Frontend Architecture</a></li>
+<li><a href="#5-backend-architecture">5. Backend Architecture</a>
+<ul>
+<li><a href="#51-database-configuration">5.1 Database Configuration</a></li>
+</ul></li>
+<li><a href="#6-api-documentation">6. API Documentation</a></li>
+<li><a href="#7-database-design">7. Database Design</a></li>
+<li><a href="#8-orm-data-models">8. ORM Data Models</a></li>
+<li><a href="#9-model-integration">9. Model Integration</a></li>
+<li><a href="#10-deployment--setup">10. Deployment &amp; Setup</a></li>
+<li><a href="#11-team-contributions">11. Team Contributions</a></li>
+<li><a href="#12-appendix">12. Appendix</a></li>
+</ul>
+
+<h2 id="1-project-overview">1. Project Overview</h2>
+
+<p><strong>OVDR (Online Virtual Dressing Room)</strong> is a full-stack web application that enables users to virtually try on clothing. It combines user-uploaded full-body images with a selected clothing item to generate a photorealistic try-on result using the StableVITON model. The platform also features intelligent clothing search (powered by CLIP), closet management, and browsing history.</p>
+
+<p>This system aims to improve online fashion shopping experiences through:
+- AI-powered virtual try-on
+- Text-based outfit search
+- Smart closet &amp; history tracking
+- Personalized recommendations</p>
+
+<p>This system integrates computer vision, recommendation systems, and text-image matching to support a complete virtual fitting experience. It is suitable for online retail platforms looking to enhance user experience and reduce return rates.</p>
+
+<hr />
+
+<h3 id="key-tasks-deliverables">Key Tasks &amp; Deliverables</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Task</th>
+  <th>Achivements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Web-based application with intuitive UI</td>
+  <td>React frontend + Flask backend</td>
+</tr>
+<tr>
+  <td>Clothing dataset with corresponding text descriptions</td>
+  <td>Organized dataset (tops, bottoms, dresses) with auto-generated captions</td>
+</tr>
+<tr>
+  <td>Functional clothing retrieval and recommendation systems</td>
+  <td>CLIP-based similarity search and planned collaborative filtering module</td>
+</tr>
+<tr>
+  <td>Efficient browsing and try-on with integrated text search</td>
+  <td>Connects search → try-on → save/share experience</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="2-technology-stack">2. Technology Stack</h2>
+
+<ul>
+<li><strong>Frontend</strong>: React.js + CSS</li>
+<li><strong>Backend</strong>: Flask (RESTful API)</li>
+<li><strong>Database</strong>: MySQL (with SQLAlchemy ORM)</li>
+<li><strong>Machine Learning Models</strong>:
+<ul>
+<li>StableVITON (Try-on generation)</li>
+<li>CLIP (Text-image matching)</li>
+<li>Qwen-VL (Clothing caption generation)</li>
+</ul></li>
+<li><strong>Other Tools</strong>:
+<ul>
+<li>Flask-Mail (email delivery)</li>
+<li>Flask-CORS (cross-origin handling)</li>
+<li>OpenAI API &amp; Aliyun Dashscope (captioning)</li>
+<li>dotenv for secret management</li>
+<li>PIL, Torch, TQDM for image and ML processing</li>
+</ul></li>
+</ul>
+
+<h2 id="3-project-structure">3. Project Structure</h2>
+
+<p>The OVDR project is organized into the following main folders:</p>
+
+<ul>
+<li><code>backend/</code>: Flask-based server-side application</li>
+<li><code>data/</code>: All images and user uploads</li>
+<li><code>frontend/</code>: React-based user interface</li>
+<li><code>docs/</code>: Project documentation</li>
+<li><code>website/</code>: Static HTML website of project</li>
+</ul>
+
+<hr />
+
+<p><details>
+<summary>📁 OVDR/ (Root Project)</summary></p>
+
+<div class="codehilite">
+<pre><span></span><code>OVDR/
+├──<span class="w"> </span>app.py<span class="w">                          </span><span class="c1"># Project root entrypoint (if needed)</span>
+├──<span class="w"> </span>README.md<span class="w">                       </span><span class="c1"># Project overview</span>
+├──<span class="w"> </span>.gitignore<span class="w">                      </span><span class="c1"># Git ignored files</span>
+</code></pre>
+</div>
+
+<p></details></p>
+
+<hr />
+
+<p><details>
+<summary>📁 backend/ — Flask backend</summary></p>
+
+<div class="codehilite">
+<pre><span></span><code>├──<span class="w"> </span>backend/<span class="w">                        </span><span class="c1"># Flask backend</span>
+│<span class="w">   </span>├──<span class="w"> </span>__init__.py<span class="w">                 </span><span class="c1"># create_app() and app initialization</span>
+│<span class="w">   </span>├──<span class="w"> </span>config.py<span class="w">                   </span><span class="c1"># Config class for DB, mail, etc.</span>
+│<span class="w">   </span>├──<span class="w"> </span>exts.py<span class="w">                     </span><span class="c1"># db/mail/cors plugin initialization</span>
+│<span class="w">   </span>├──<span class="w"> </span>.env<span class="w">                        </span><span class="c1"># Environment variables for secrets</span>
+│
+│<span class="w">   </span>├──<span class="w"> </span>database/<span class="w">                   </span><span class="c1"># DB schema, data and documentation</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>OVDR.sql
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ovdr_structure.sql
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ovdr_data_only.sql
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>backup.sql
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ERD.png<span class="w">                 </span><span class="c1"># Database Entity-Relationship Diagram</span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>database.md<span class="w">             </span><span class="c1"># DB documentation</span>
+│
+│<span class="w">   </span>├──<span class="w"> </span>migrations/<span class="w">                 </span><span class="c1"># Flask-Migrate migration files</span>
+│
+│<span class="w">   </span>├──<span class="w"> </span>models/<span class="w">                     </span><span class="c1"># Model directories</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>clip-vit-large-patch14<span class="w">  </span><span class="c1"># CLIP model</span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>StableVITON/<span class="w">            </span><span class="c1"># StableVITON try-on model</span>
+│
+│<span class="w">   </span>├──<span class="w"> </span>routes/<span class="w">                     </span><span class="c1"># Flask route blueprints</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>__init__.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>auth.py<span class="w">                 </span><span class="c1"># Login/Register routes</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>closet.py<span class="w">               </span><span class="c1"># Clothing listing &amp; closet management</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>combination.py<span class="w">          </span><span class="c1"># Outfit combination logic</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>email.py<span class="w">                </span><span class="c1"># Email sending routes</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>forms.py<span class="w">                </span><span class="c1"># WTForms for validation</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>history.py<span class="w">              </span><span class="c1"># Browsing history</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>process.py<span class="w">              </span><span class="c1"># Try-on image generation</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>recommend.py<span class="w">            </span><span class="c1"># Recommendation system</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>search.py<span class="w">               </span><span class="c1"># CLIP-based text search</span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>user_image.py<span class="w">           </span><span class="c1"># User image upload &amp; fetch</span>
+│
+│<span class="w">   </span>├──<span class="w"> </span>scripts/<span class="w">                    </span><span class="c1"># One-time utility scripts</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>image_embedding.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>insert_clothes_data.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>precompute_similarity.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>qwen_generate_caption.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>recommend_clicktime.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>recommend_sim_algorithm.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>rename_clothes.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>save_CLIP_model.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>search_algorithm.py
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>search_api.py
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>similarity_matrix.npy
+│
+│<span class="w">   </span>├──<span class="w"> </span>utils/<span class="w">                      </span><span class="c1"># Utility modules</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>caption_utils.py<span class="w">        </span><span class="c1"># Caption formatting and generation</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>download_utils.py<span class="w">       </span><span class="c1"># Download cloth image from URL</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>helpers.py<span class="w">              </span><span class="c1"># URL/path formatting utilities</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>image_utils.py<span class="w">          </span><span class="c1"># Save/rename/delete user images</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>stableviton_runner.py<span class="w">   </span><span class="c1"># Run StableVITON subprocess</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>static_serve.py<span class="w">         </span><span class="c1"># Static image serving utilities</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>config.py<span class="w">               </span><span class="c1"># Duplicate? (backend/config.py used)</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>exts.py<span class="w">                 </span><span class="c1"># Duplicate? (used for plugin setup)</span>
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>models.py<span class="w">               </span><span class="c1"># SQLAlchemy models (User, Clothing...)</span>
+│
+│<span class="w">   </span>└──<span class="w"> </span>similarity_matrix.npy<span class="w">       </span><span class="c1"># Precomputed similarity matrix</span>
+</code></pre>
+</div>
+
+<p></details></p>
+
+<hr />
+
+<p><details>
+<summary>📁 data/ — Static &amp; dynamic image data</summary></p>
+
+<div class="codehilite">
+<pre><span></span><code>├──<span class="w"> </span>data/<span class="w">                           </span><span class="c1"># Image assets &amp; user uploads</span>
+│<span class="w">   </span>├──<span class="w"> </span>clothes/<span class="w">                    </span><span class="c1"># Main clothing image dataset</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>tops/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>cloth/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>cloth-mask/
+│<span class="w">   </span>│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>model-tryon/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>bottoms/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>dresses/
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>captions/<span class="w">               </span><span class="c1"># Generated captions JSONs</span>
+│
+│<span class="w">   </span>├──<span class="w"> </span>users/
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>image/<span class="w">                  </span><span class="c1"># Uploaded user full-body images</span>
+│<span class="w">   </span>│<span class="w">     </span>└──<span class="w"> </span><span class="m">1</span>.jpg<span class="w">                 </span><span class="c1"># Named by user_id</span>
+│
+│<span class="w">   </span>└──<span class="w"> </span>combinations/<span class="w">               </span><span class="c1"># Output try-on images</span>
+│<span class="w">       </span>└──<span class="w"> </span>user_1/
+│<span class="w">           </span>└──<span class="w"> </span><span class="m">000001</span>.jpg
+</code></pre>
+</div>
+
+<p></details></p>
+
+<hr />
+
+<p><details>
+<summary>📁 frontend/ — React-based frontend</summary></p>
+
+<div class="codehilite">
+<pre><span></span><code>├──<span class="w"> </span>frontend/<span class="w">                       </span><span class="c1"># React frontend</span>
+│<span class="w">   </span>├──<span class="w"> </span>node_modules/<span class="w">               </span><span class="c1"># Frontend dependencies</span>
+│<span class="w">   </span>├──<span class="w"> </span>public/
+│<span class="w">   </span>├──<span class="w"> </span>src/<span class="w">                        </span><span class="c1"># Main frontend code</span>
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>App.js<span class="w"> </span>/<span class="w"> </span>App.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>ClothesDetail.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>FullCloset.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>History.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Home.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Login.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>Register.js
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>SendImage.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>TryOn.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>UploadImage.js<span class="w"> </span>/<span class="w"> </span>.css
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>index.js<span class="w"> </span>/<span class="w"> </span>index.css
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>setupTests.js<span class="w"> </span>/<span class="w"> </span>reportWebVitals.js
+│<span class="w">   </span>├──<span class="w"> </span>package.json<span class="w">                </span><span class="c1"># React project config</span>
+│<span class="w">   </span>├──<span class="w"> </span>package-lock.json
+│<span class="w">   </span>└──<span class="w"> </span>README.md<span class="w">                   </span><span class="c1"># Frontend description</span>
+</code></pre>
+</div>
+
+<p></details></p>
+
+<hr />
+
+<p><details>
+<summary>📁 docs/ — Project documentation</summary></p>
+
+<div class="codehilite">
+<pre><span></span><code>├──<span class="w"> </span>docs/<span class="w">                           </span><span class="c1"># Project documentation</span>
+│<span class="w">   </span>├──<span class="w"> </span>code_report.md<span class="w">              </span><span class="c1"># Final report with structure &amp; logic</span>
+│<span class="w">   </span>├──<span class="w"> </span>api_documentation.md<span class="w">        </span><span class="c1"># Full REST API documentation</span>
+│<span class="w">   </span>└──<span class="w"> </span>Summary_of_quality_assurance.pdf<span class="w">  </span><span class="c1"># Quality testing doc</span>
+</code></pre>
+</div>
+
+<p></details></p>
+
+<hr />
+
+<p><details>
+<summary>📁 website/ — Static information site</summary></p>
+
+<div class="codehilite">
+<pre><span></span><code>├──<span class="w"> </span>website/<span class="w">                        </span><span class="c1"># Static info website</span>
+│<span class="w">   </span>├──<span class="w"> </span>css/
+│<span class="w">   </span>├──<span class="w"> </span>minutes/
+│<span class="w">   </span>├──<span class="w"> </span>src/
+│<span class="w">   </span>└──<span class="w"> </span>projectindex.html<span class="w">           </span><span class="c1"># Presentation site</span>
+</code></pre>
+</div>
+
+<p></details></p>
+
+<hr />
+
+<h2 id="4-frontend-architecture">4. Frontend Architecture</h2>
+
+<p>Please refer to JSdoc at https://csprojects.nottingham.edu.cn/grp-team07-gitlab/grp-team07-gitlab-work/-/tree/main/docs/JSdocs</p>
+
+<h2 id="5-backend-architecture">5. Backend Architecture</h2>
+
+<ul>
+<li><p>Each route module encapsulates one set of responsibilities:</p>
+
+<ul>
+<li><code>user_image.py</code>: Handle upload/retrieve user photos</li>
+<li><code>closet.py</code>: Clothing catalog and user closet</li>
+<li><code>process.py</code>: Virtual try-on (StableVITON)</li>
+<li><code>search.py</code>: Search with CLIP and text queries</li>
+<li><code>history.py</code>: User browsing records </li>
+<li><code>recommend.py</code>: Related outfit recommendation (optional)</li>
+</ul></li>
+<li><p>All static image routing handled by static_serve.py</p></li>
+<li><p>Database managed via SQLAlchemy + Flask-Migrate</p></li>
+</ul>
+
+<h3 id="51-database-configuration">5.1 Database Configuration</h3>
+
+<p>The OVDR backend system is powered by a <strong>MySQL-compatible relational database</strong> to store users, clothing metadata, try-on results, and behavioral logs. SQLAlchemy ORM is used for seamless object-relational mapping.</p>
+
+<h4 id="configuration-method">Configuration Method</h4>
+
+<p>Database credentials and server details are managed through environment variables in a <code>.env</code> file located under <code>./backend/</code>, loaded via <code>python-dotenv</code>. This prevents hardcoding sensitive credentials in source code.</p>
+
+<p>In <code>backend/config.py</code>, SQLAlchemy URI is constructed as:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="n">SQLALCHEMY_DATABASE_URI</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;mysql+pymysql://</span><span class="si">{</span><span class="n">USER_NAME</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">PASSWORD</span><span class="si">}</span><span class="s2">@</span><span class="si">{</span><span class="n">HOSTNAME</span><span class="si">}</span><span class="s2">:</span><span class="si">{</span><span class="n">PORT</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">DATABASE</span><span class="si">}</span><span class="s2">?charset=utf8mb4&quot;</span>
+</code></pre>
+</div>
+
+<h4 id="initial-database-setup">Initial Database Setup</h4>
+
+<p>The database schema and sample data are provided under:</p>
+
+<ul>
+<li><p><code>backend/database/ovdr_structure.sql</code> – full schema (tables, constraints, types)</p></li>
+<li><p><code>backend/database/ovdr_data_only.sql</code> – data-only insert statements</p></li>
+</ul>
+
+<p>To initialize a local MySQL database:</p>
+
+<div class="codehilite">
+<pre><span></span><code>mysql<span class="w"> </span>-u<span class="w"> </span>root<span class="w"> </span>-p
+CREATE<span class="w"> </span>DATABASE<span class="w"> </span>ovdr<span class="p">;</span>
+USE<span class="w"> </span>ovdr<span class="p">;</span>
+SOURCE<span class="w"> </span>path/to/ovdr_structure.sql<span class="p">;</span>
+SOURCE<span class="w"> </span>path/to/ovdr_data_only.sql<span class="p">;</span>
+</code></pre>
+</div>
+
+<p>Once completed, update .env with:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="na">HOSTNAME</span><span class="o">=</span><span class="s">localhost</span>
+</code></pre>
+</div>
+
+<h4 id="common-development-ips">Common Development IPs</h4>
+
+<p>The following are commonly used IP addresses during internal development:
+- <code>10.176.45.0</code>: used under eduroam
+- <code>172.19.108.9</code>: used under UNNC-Living
+If your system fails to connect to these, migrate to local MySQL using the above steps.</p>
+
+<h4 id="support">Support</h4>
+
+<p>If you encounter access issues, please reach out to the maintainer via email: <code>ssyzd4@nottingham.edu.cn</code>.</p>
+
+<h2 id="6-api-documentation">6. API Documentation</h2>
+
+<p>This section documents all RESTful APIs for the OVDR system. Each subsection corresponds to one module.</p>
+
+<hr />
+
+<h3 id="1-authentication-api-routesauthpy">🔐 1. Authentication API (<code>routes/auth.py</code>)</h3>
+
+<blockquote>
+  <p>Manage user login and registration logic</p>
+</blockquote>
+
+<hr />
+
+<h4 id="post-login"><code>POST /login</code></h4>
+
+<p><strong>Description</strong>: Authenticate user using username and password.</p>
+
+<p><strong>Form Data</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>username</td>
+  <td>string</td>
+  <td>Yes</td>
+  <td>The user's username</td>
+</tr>
+<tr>
+  <td>password</td>
+  <td>string</td>
+  <td>Yes</td>
+  <td>Plaintext password input</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Login successful!&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;testuser&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Error Responses</strong>:
+- <code>400 Bad Request</code> - Username does not exist
+- <code>400 Bad Request</code> - Password entered incorrectly
+- <code>400 Bad Request</code> - Invalid input (form validation failed)</p>
+
+<hr />
+
+<h4 id="post-register"><code>POST /register</code></h4>
+
+<p><strong>Description</strong>: Register a new user with a unique username and encrypted password.</p>
+
+<p><strong>Form Data</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>username</td>
+  <td>string</td>
+  <td>Yes</td>
+  <td>Unique username</td>
+</tr>
+<tr>
+  <td>password</td>
+  <td>string</td>
+  <td>Yes</td>
+  <td>Password to encrypt</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;User registration succeeded!&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Error Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[[</span><span class="s2">&quot;Username already exists.&quot;</span><span class="p">]]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="get-captchaemail"><code>GET /captcha/email</code></h4>
+
+<p><strong>Description</strong>: Sends a 4-digit verification code to the provided email address. (To be integrated into registration in future)</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>email</td>
+  <td>string</td>
+  <td>Yes</td>
+  <td>Email to receive code</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code>success
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="get-test"><code>GET /test</code></h4>
+
+<p><strong>Description</strong>: Test email sending (hardcoded email). For development/debugging purposes.</p>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code>Send successfully
+</code></pre>
+</div>
+
+<hr />
+
+<h3 id="2-user-image-api-routesuser_imagepy">👤 2. User Image API (<code>routes/user_image.py</code>)</h3>
+
+<blockquote>
+  <p>Upload or retrieve user full-body photos</p>
+  
+  <h4 id="post-upload_image"><code>POST /upload_image</code></h4>
+</blockquote>
+
+<p><strong>Description</strong>: Upload a user full-body image and update the database with the saved path.</p>
+
+<p><strong>Form Data</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>Yes</td>
+  <td>ID of the user</td>
+</tr>
+<tr>
+  <td>file</td>
+  <td>file</td>
+  <td>Yes</td>
+  <td>Image file to be uploaded</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Image uploaded and path updated successfully&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;image_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data/users/image/1.jpg&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Errors</strong>:
+- 400: Missing fields or empty file
+- 404: User not found</p>
+
+<hr />
+
+<h4 id="get-get_user_info"><code>GET /get_user_info</code></h4>
+
+<p><strong>Description</strong>: Retrieve user profile information including the uploaded image path.</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>Yes</td>
+  <td>ID of the user</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alice&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;image_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data/users/image/1.jpg&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Errors</strong>:
+- 400: Missing user_id
+- 404: User not found</p>
+
+<hr />
+
+<h3 id="3-closet-api-routesclosetpy">🧥 3. Closet API (<code>routes/closet.py</code>)</h3>
+
+<blockquote>
+  <p>Endpoints for browsing and managing virtual clothing closet.</p>
+</blockquote>
+
+<hr />
+
+<h4 id="get-apiclothes"><code>GET /api/clothes</code></h4>
+
+<p><strong>Description</strong>: Retrieve all clothing items filtered by category.</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>category</td>
+  <td>string</td>
+  <td>No</td>
+  <td>Clothing category: <code>tops</code>, <code>bottoms</code>, <code>dresses</code> (default: <code>tops</code>)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Floral Cotton Blouse with v-neckline and short sleeves&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;image_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/tops/model-tryon/00001.jpg&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;closet_users&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="get-detailclothing_id"><code>GET /detail/&lt;clothing_id&gt;</code></h4>
+
+<p><strong>Description</strong>: Retrieve detailed info about a specific clothing item.</p>
+
+<p><strong>Path Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>clothing_id</td>
+  <td>int</td>
+  <td>Clothing item ID</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;item&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;labels&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;floral&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cotton&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;blouse&quot;</span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Floral Cotton Blouse with v-neckline and short sleeves&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;cloth_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/tops/cloth/00001.jpg&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="post-add-to-closet"><code>POST /add-to-closet</code></h4>
+
+<p><strong>Description</strong>: Add a clothing item to a user's closet.</p>
+
+<p><strong>Request Body</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;clothing_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Constraints</strong>:
+- A user can have <strong>up to 5 items per category</strong>.
+- Duplicate additions are not allowed.</p>
+
+<p><strong>Success Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Item added to closet successfully!&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Error Responses</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Item already in closet!&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Max 5 tops items allowed. Remove one to add new.&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="get-get-closet"><code>GET /get-closet</code></h4>
+
+<p><strong>Description</strong>: Get all clothing items in a user's closet, optionally filtered by category.</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>Yes</td>
+  <td>ID of the user</td>
+</tr>
+<tr>
+  <td>category</td>
+  <td>string</td>
+  <td>No</td>
+  <td>Category to filter (default: tops)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;closet&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tops&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/tops/cloth/00005.jpg&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="post-remove-from-closet"><code>POST /remove-from-closet</code></h4>
+
+<p><strong>Description</strong>: Remove a clothing item from a user's closet.</p>
+
+<p><strong>Request Body</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;clothing_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Item removed from closet successfully.&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="get-dataclothespathfilename"><code>GET /data/clothes/&lt;path:filename&gt;</code></h4>
+
+<p><strong>Description</strong>: Serve static clothing images from the <code>/data/clothes/</code> directory.</p>
+
+<p><strong>Example Request</strong>:</p>
+
+<pre><code>GET /data/clothes/tops/model-tryon/00001.jpg
+</code></pre>
+
+<p><strong>Response</strong>:
+- Returns the image directly if found.</p>
+
+<h2 id="-http-404-if-the-image-is-missing">- HTTP 404 if the image is missing.</h2>
+
+<h3 id="4-history-api-routeshistorypy">🕘 4. History API (<code>routes/history.py</code>)</h3>
+
+<blockquote>
+  <p>Track and retrieve browsing history</p>
+</blockquote>
+
+<h4 id="post-add-history"><code>POST /add-history</code></h4>
+
+<p><strong>Description</strong>:<br />
+Adds a clothing item to the user's browsing history.<br />
+- Prevents duplicate entries.
+- Keeps only the latest 20 records per user.</p>
+
+<p><strong>Request Body</strong> (JSON):</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;clothing_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;History recorded successfully.&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Errors</strong>:
+- <code>400</code>: Missing <code>user_id</code> or <code>clothing_id</code>.
+- <code>500</code>: Database error or insertion failure.</p>
+
+<hr />
+
+<h4 id="get-get-history"><code>GET /get-history</code></h4>
+
+<p><strong>Description</strong>:<br />
+Retrieves the latest 20 items viewed by a specific user from their browsing history.</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>Yes</td>
+  <td>ID of the user</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Example Request</strong>:</p>
+
+<pre><code>GET /get-history?user_id=1
+</code></pre>
+
+<p><strong>Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;history&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;image&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/tops/cloth/00005_top.jpg&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Floral Cotton Blouse with round neckline and long sleeves&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-03-30 14:23:12&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;closet_users&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tops&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Errors</strong>:
+- <code>400</code>: Missing <code>user_id</code>.
+- <code>500</code>: Database error or malformed caption field.</p>
+
+<hr />
+
+<h3 id="5-try-on-api-routesprocesspy">✨ 5. Try-On API (<code>routes/process.py</code>)</h3>
+
+<h2 id="generate-virtual-try-on-results">&gt; Generate virtual try-on results</h2>
+
+<h4 id="post-process_image"><code>POST /process_image</code></h4>
+
+<p><strong>Description</strong>:<br />
+Generate a virtual try-on image by combining a user-uploaded full-body image and a selected clothing item.</p>
+
+<p>You can either:
+- Provide <code>item_id</code> (recommended): automatically fetch clothing from database.
+- OR provide <code>cloth_url</code> directly (e.g., from frontend image selection).</p>
+
+<p><strong>Request Body (JSON)</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>✅ Yes</td>
+  <td>ID of the user</td>
+</tr>
+<tr>
+  <td>item_id</td>
+  <td>int</td>
+  <td>❌ No</td>
+  <td>Closet item ID to fetch clothing from DB</td>
+</tr>
+<tr>
+  <td>cloth_url</td>
+  <td>string</td>
+  <td>❌ No</td>
+  <td>Optional: URL or path to clothing image</td>
+</tr>
+<tr>
+  <td>item_category</td>
+  <td>string</td>
+  <td>✅ Yes</td>
+  <td>Type of clothing: "tops", "bottoms", or "dresses"</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+  <p>⚠️ Either <code>item_id</code> or <code>cloth_url</code> must be provided.</p>
+</blockquote>
+
+<p><strong>Example</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;user_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;item_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;item_category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tops&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Success Response</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;image_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0000012.jpg&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Error Responses</strong>:</p>
+
+<ul>
+<li><code>400 Bad Request</code>: Missing required fields or image</li>
+<li><code>404 Not Found</code>: User or image not found</li>
+<li><code>500 Internal Server Error</code>: StableVITON failure or file I/O issues</li>
+</ul>
+
+<hr />
+
+<h4 id="get-dataclothesfilename"><code>GET /data/clothes/&lt;filename&gt;</code></h4>
+
+<p><strong>Description</strong>:<br />
+Serve static clothing images from the <code>/data/clothes/</code> directory.</p>
+
+<p><strong>Example</strong>:<br />
+Request: <code>GET /data/clothes/tops/cloth/000001_top.jpg</code></p>
+
+<p>Returns: Clothing image file.</p>
+
+<hr />
+
+<h3 id="6-search-api-routessearchpy">🔍 6. Search API (<code>routes/search.py</code>)</h3>
+
+<h2 id="text-based-clothing-search">&gt; Text-based clothing search  </h2>
+
+<h4 id="get-search"><code>GET /search</code></h4>
+
+<p><strong>Description</strong>:<br />
+Search for clothing items using a natural language text query. The backend uses a pretrained CLIP model to match text to clothing image embeddings.</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>query</td>
+  <td>string</td>
+  <td>✅ Yes</td>
+  <td>Natural language query (e.g. "red hoodie")</td>
+</tr>
+<tr>
+  <td>top_n</td>
+  <td>int</td>
+  <td>❌ No</td>
+  <td>Number of results to return (default: 20)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response</strong>:
+Returns an array of matched clothing items ranked by similarity.</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Red Cotton Hoodie&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tops&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;image_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/tops/cloth/00012_top.jpg&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;closet_users&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="err">...</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Errors</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Code</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>400</td>
+  <td>Missing query parameter</td>
+</tr>
+<tr>
+  <td>500</td>
+  <td>Internal error (model failure, DB error)</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="7-recommendation-api-routesrecommendpy">🎯 7. Recommendation API (<code>routes/recommend.py</code>)</h3>
+
+<h2 id="recommend-popular-items-or-personalized-content">&gt; Recommend popular items or personalized content  </h2>
+
+<h4 id="get-clothingid"><code>GET /clothing/{id}</code></h4>
+
+<ul>
+<li><strong>Description:</strong> Retrieve clothing details</li>
+<li><strong>Response:</strong></li>
+</ul>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;White Blouse&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;tops&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="get-recommendclothing_id"><code>GET /recommend/{clothing_id}</code></h4>
+
+<ul>
+<li><strong>Description:</strong> Retrieve top visually and semantically similar clothing items.</li>
+<li><strong>Response:</strong></li>
+</ul>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;recommendations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/tops/000045_top.jpg&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="get-recommendpopular"><code>GET /recommend/popular</code></h4>
+
+<ul>
+<li><strong>Description:</strong> Retrieve globally popular clothing items based on interaction frequency.</li>
+<li><strong>Response:</strong></li>
+</ul>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;recommended_popular&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bottoms&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/bottoms/000088_bottom.jpg&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="get-recommenduseruser_id"><code>GET /recommend/user/{user_id}</code></h4>
+
+<ul>
+<li><strong>Description:</strong> Recommend clothing items for a user based on collaborative filtering.</li>
+<li><strong>Response:</strong></li>
+</ul>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;personalized_recommendations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;dresses&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:5000/data/clothes/dresses/000073_dress.jpg&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h3 id="8-combination-api-routescombinationpy">🧵 8. Combination API (<code>routes/combination.py</code>)</h3>
+
+<blockquote>
+  <p>Save try-on results and show outfit combinations </p>
+</blockquote>
+
+<h4 id="post-save-combination"><code>POST /save-combination</code></h4>
+
+<p><strong>Description</strong>: Save a virtual try-on combination to the database.</p>
+
+<p><strong>Request Body (JSON)</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>✅ Yes</td>
+  <td>ID of the user</td>
+</tr>
+<tr>
+  <td>top_id</td>
+  <td>int</td>
+  <td>❌ No</td>
+  <td>ID of the top clothing item</td>
+</tr>
+<tr>
+  <td>bottom_id</td>
+  <td>int</td>
+  <td>❌ No</td>
+  <td>ID of the bottom clothing item</td>
+</tr>
+<tr>
+  <td>dress_id</td>
+  <td>int</td>
+  <td>❌ No</td>
+  <td>ID of the dress item</td>
+</tr>
+<tr>
+  <td>resultImage</td>
+  <td>string</td>
+  <td>✅ Yes</td>
+  <td>Relative path to the generated try-on image</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response Example</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Combination saved!&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="get-get-combinations"><code>GET /get-combinations</code></h4>
+
+<p><strong>Description</strong>: Retrieve all saved try-on combinations for a given user.</p>
+
+<p><strong>Query Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>int</td>
+  <td>✅ Yes</td>
+  <td>ID of the user</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response Example</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;combinations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;top_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;bottom_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;dress_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data/combinations/user_1/000023.jpg&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h4 id="delete-delete-combination"><code>DELETE /delete-combination</code></h4>
+
+<p><strong>Description</strong>:<br />
+Delete a previously saved outfit combination by its ID.</p>
+
+<p><strong>Request Body</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Required</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>int</td>
+  <td>✅ Yes</td>
+  <td>The ID of the combination to delete</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Response (Success)</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Combination deleted successfully.&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Error Responses</strong>:
+- <code>400 Bad Request</code>:<br />
+  <div class="codehilite">
+  <pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Missing combination ID&quot;</span><span class="w"> </span><span class="p">}</span>
+  </code></pre>
+  </div></p>
+
+<ul>
+<li><p><code>404 Not Found</code>:  </p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Combination not found&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre>
+</div></li>
+<li><p><code>500 Internal Server Error</code>:  </p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span><span class="w"> </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Database error or deletion failed&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre>
+</div></li>
+</ul>
+
+<hr />
+
+<h4 id="get-show_imageuseridfilename"><code>GET /show_image/&lt;userid&gt;/&lt;filename&gt;</code></h4>
+
+<p><strong>Description</strong>: Serve generated outfit image from the <code>/data/combinations/user_&lt;userid&gt;/</code> folder.</p>
+
+<p><strong>Path Parameters</strong>:</p>
+
+<table>
+<thead>
+<tr>
+  <th>Name</th>
+  <th>Type</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>userid</td>
+  <td>int</td>
+  <td>User ID, used to locate the user directory</td>
+</tr>
+<tr>
+  <td>filename</td>
+  <td>string</td>
+  <td>File name of the image (URL-encoded if needed)</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>Example</strong>:</p>
+
+<pre><code>GET /show_image/1/000003.jpg
+</code></pre>
+
+<p>Returns: The image file if found.</p>
+
+<hr />
+
+<h3 id="9-email-api-routesemailpy">📩 9. Email API (<code>routes/email.py</code>)</h3>
+
+<h4 id="post-send-email"><code>POST /send-email</code></h4>
+
+<p><strong>Description</strong>:<br />
+Send a try-on result image to a specified email address. This endpoint expects a base64-encoded image (JPEG) and recipient email.</p>
+
+<p><strong>Request Body</strong>:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;imageBase64&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Response</strong>:
+- On success:</p>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Email sent successfully!&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<ul>
+<li>On error:</li>
+</ul>
+
+<div class="codehilite">
+<pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Missing email or image&quot;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Notes</strong>:
+- Make sure your Flask app is configured with SMTP credentials:
+  <div class="codehilite">
+  <pre><span></span><code><span class="n">MAIL<em>SERVER</span> <span class="o">=</span> <span class="s2">&quot;smtp.qq.com&quot;</span>
+  <span class="n">MAIL</em>PORT</span> <span class="o">=</span> <span class="mi">465</span>
+  <span class="n">MAIL<em>USERNAME</span> <span class="o">=</span> <span class="s2">&quot;your</em>email@qq.com&quot;</span>
+  <span class="n">MAIL<em>PASSWORD</span> <span class="o">=</span> <span class="s2">&quot;your</em>app<em>password&quot;</span>
+  <span class="n">MAIL</em>USE_SSL</span> <span class="o">=</span> <span class="kc">True</span>
+  </code></pre>
+  </div></p>
+
+<ul>
+<li>You must initialize Flask-Mail and register <code>email_bp</code> in <code>create_app()</code>.</li>
+</ul>
+
+<h2 id="7-database-design">7. Database Design</h2>
+
+<h3 id="overview">Overview</h3>
+
+<p>The <strong>OVDR</strong> (Online Virtual Dressing Room) database is designed to store user information, virtual try-on data, and clothing items. It supports features like:
+- User information (user name, hash password and full body image)
+- Clothing item storage with corresponding text descriptions (captions)
+- Virtual try-on outfit combinations
+- User wardrobe (Closet) management
+- History tracking</p>
+
+<hr />
+
+<h3 id="database-schema">Database Schema</h3>
+
+<p>The following tables are included in the <strong>OVDR</strong> database (obsolete or temporarily unused tables are not included):</p>
+
+<h3 id="1-users-user-table"><strong>1. <code>users</code> (User Table)</strong></h3>
+
+<p>Stores user credentials and profile data.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>user_id</code></td>
+  <td>INT (PK, AUTO_INCREMENT)</td>
+  <td>Primary key</td>
+  <td>Unique ID for each user</td>
+</tr>
+<tr>
+  <td><code>username</code></td>
+  <td>VARCHAR(255)</td>
+  <td>UNIQUE, NOT NULL</td>
+  <td>Unique username for login</td>
+</tr>
+<tr>
+  <td><code>password_hash</code></td>
+  <td>VARCHAR(255)</td>
+  <td>NOT NULL</td>
+  <td>Hashed password</td>
+</tr>
+<tr>
+  <td><code>image_path</code></td>
+  <td>VARCHAR(255)</td>
+  <td>DEFAULT NULL</td>
+  <td>Path to user's full-body image</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="2-clothing-clothing-items"><strong>2. <code>clothing</code> (Clothing Items)</strong></h3>
+
+<p>Stores clothing data and AI-generated descriptions.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>cid</code></td>
+  <td>INT (PK, AUTO_INCREMENT)</td>
+  <td>Primary key</td>
+  <td>Unique clothing item ID</td>
+</tr>
+<tr>
+  <td><code>category</code></td>
+  <td>ENUM('tops', 'bottoms', 'dresses')</td>
+  <td>NOT NULL</td>
+  <td>Clothing category</td>
+</tr>
+<tr>
+  <td><code>caption</code></td>
+  <td>JSON</td>
+  <td>NULL</td>
+  <td>AI-generated clothing description</td>
+</tr>
+<tr>
+  <td><code>closet_users</code></td>
+  <td>INT</td>
+  <td>DEFAULT 0</td>
+  <td>Number of users who added this to wardrobe</td>
+</tr>
+<tr>
+  <td><code>cloth_path</code></td>
+  <td>VARCHAR(255)</td>
+  <td>NOT NULL</td>
+  <td>Path to clothing image</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="3-closet-user-wardrobe"><strong>3. <code>closet</code> (User Wardrobe)</strong></h3>
+
+<p>Tracks clothing items added to users' wardrobes.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>id</code></td>
+  <td>INT (PK, AUTO_INCREMENT)</td>
+  <td>Primary key</td>
+  <td>Record ID</td>
+</tr>
+<tr>
+  <td><code>user_id</code></td>
+  <td>INT</td>
+  <td>NOT NULL, FK → <code>users(user_id)</code></td>
+  <td>User who owns this wardrobe</td>
+</tr>
+<tr>
+  <td><code>clothing_id</code></td>
+  <td>INT</td>
+  <td>NOT NULL, FK → <code>clothing(cid)</code> ON DELETE CASCADE</td>
+  <td>Clothing item</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="trigger-limit-closet-items-to-5-per-category"><strong>Trigger: Limit closet items to 5 per category</strong></h4>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">limit_closet_items</span>
+<span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">Closet</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Closet</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">user_id</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Closet</span>
+<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">user_id</span>
+<span class="w">            </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">added_at</span><span class="w"> </span><span class="k">DESC</span>
+<span class="w">            </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">5</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">temp_table</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h3 id="4-history-user-view-history"><strong>4. <code>history</code> (User View History)</strong></h3>
+
+<p>Tracks which clothing items users have viewed.</p>
+
+<table>
+<thead>
+<tr>
+  <th>Column</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><code>id</code></td>
+  <td>INT (PK, AUTO_INCREMENT)</td>
+  <td>Primary key</td>
+  <td>Record ID</td>
+</tr>
+<tr>
+  <td><code>user_id</code></td>
+  <td>INT</td>
+  <td>NOT NULL, FK → <code>users(user_id)</code></td>
+  <td>User who viewed clothing</td>
+</tr>
+<tr>
+  <td><code>clothing_id</code></td>
+  <td>INT</td>
+  <td>NOT NULL, FK → <code>clothing(cid)</code> ON DELETE CASCADE</td>
+  <td>Clothing item</td>
+</tr>
+<tr>
+  <td><code>created_at</code></td>
+  <td>TIMESTAMP</td>
+  <td>DEFAULT CURRENT_TIMESTAMP</td>
+  <td>Timestamp of viewing</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="trigger-automatically-keep-only-the-latest-20-records"><strong>Trigger: Automatically keep only the latest 20 records</strong></h4>
+
+<div class="codehilite">
+<pre><span></span><code><span class="k">DELIMITER</span><span class="w"> </span><span class="o">//</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">limit_history_records</span>
+<span class="k">AFTER</span><span class="w"> </span><span class="k">INSERT</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="o">`</span><span class="n">history</span><span class="o">`</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">BEGIN</span>
+<span class="w">    </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="o">`</span><span class="n">history</span><span class="o">`</span>
+<span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">user_id</span>
+<span class="w">    </span><span class="k">AND</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span>
+<span class="w">        </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+<span class="w">            </span><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">history</span>
+<span class="w">            </span><span class="k">WHERE</span><span class="w"> </span><span class="n">user_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">NEW</span><span class="p">.</span><span class="n">user_id</span>
+<span class="w">            </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">created_at</span><span class="w"> </span><span class="k">DESC</span>
+<span class="w">            </span><span class="k">LIMIT</span><span class="w"> </span><span class="mi">20</span>
+<span class="w">        </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">temp_table</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="k">END</span><span class="p">;</span>
+<span class="o">//</span>
+<span class="k">DELIMITER</span><span class="w"> </span><span class="p">;</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="entity-relationship-diagram-erd">### <strong>Entity Relationship Diagram (ERD)</strong></h2>
+
+<p><img src="../backend/database/ERD.png" alt="ERD Diagram" /></p>
+
+<hr />
+
+<h2 id="8-orm-data-models">8. ORM Data Models</h2>
+
+<blockquote>
+  <p><code>./backend/models.py</code></p>
+</blockquote>
+
+<h2 id="this-project-uses-sqlalchemy-orm-to-manage-database-tables-below-is-a-summary-of-the-key-models-used-in-the-system">This project uses SQLAlchemy ORM to manage database tables. Below is a summary of the key models used in the system.</h2>
+
+<h3 id="321-user-table">3.2.1 <code>User</code> Table</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>user_id</td>
+  <td>Integer</td>
+  <td>Primary Key</td>
+  <td>Unique user ID</td>
+</tr>
+<tr>
+  <td>username</td>
+  <td>String</td>
+  <td>Not Null, Unique</td>
+  <td>Username for login</td>
+</tr>
+<tr>
+  <td>password</td>
+  <td>String</td>
+  <td>Not Null</td>
+  <td>Hashed password</td>
+</tr>
+<tr>
+  <td>image_path</td>
+  <td>String</td>
+  <td>Nullable</td>
+  <td>Path to uploaded full-body image</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="322-clothing-table">3.2.2 <code>Clothing</code> Table</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>cid</td>
+  <td>Integer</td>
+  <td>Primary Key</td>
+  <td>Clothing item ID</td>
+</tr>
+<tr>
+  <td>category</td>
+  <td>Enum</td>
+  <td>Not Null</td>
+  <td>'tops', 'bottoms', or 'dresses'</td>
+</tr>
+<tr>
+  <td>caption</td>
+  <td>JSON</td>
+  <td>Nullable</td>
+  <td>Structured description of the item</td>
+</tr>
+<tr>
+  <td>closet_users</td>
+  <td>Integer</td>
+  <td>Default 0</td>
+  <td>Number of users who added this to closet</td>
+</tr>
+<tr>
+  <td>cloth_path</td>
+  <td>String</td>
+  <td>Nullable</td>
+  <td>Flat cloth image path</td>
+</tr>
+<tr>
+  <td>cloth<em>mask</em>path</td>
+  <td>String</td>
+  <td>Nullable</td>
+  <td>Binary mask path</td>
+</tr>
+<tr>
+  <td>model<em>tryon</em>path</td>
+  <td>String</td>
+  <td>Nullable</td>
+  <td>Model try-on image path</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="323-closet-table">3.2.3 <code>Closet</code> Table</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>Integer</td>
+  <td>Primary Key</td>
+  <td>Closet entry ID</td>
+</tr>
+<tr>
+  <td>user_id</td>
+  <td>Integer</td>
+  <td>Foreign Key (User)</td>
+  <td>Owner of this closet item</td>
+</tr>
+<tr>
+  <td>clothing_id</td>
+  <td>Integer</td>
+  <td>Foreign Key (Clothing)</td>
+  <td>Clothing item stored</td>
+</tr>
+<tr>
+  <td>added_at</td>
+  <td>TIMESTAMP</td>
+  <td>Auto Timestamp</td>
+  <td>Time added to closet</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="324-combination-table">3.2.4 <code>Combination</code> Table</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>Integer</td>
+  <td>Primary Key</td>
+  <td>Combination record ID</td>
+</tr>
+<tr>
+  <td>user_id</td>
+  <td>Integer</td>
+  <td>Foreign Key (User)</td>
+  <td>User who created this outfit</td>
+</tr>
+<tr>
+  <td>top_id</td>
+  <td>Integer</td>
+  <td>FK (Clothing, Nullable)</td>
+  <td>Top clothing item</td>
+</tr>
+<tr>
+  <td>bottom_id</td>
+  <td>Integer</td>
+  <td>FK (Clothing, Nullable)</td>
+  <td>Bottom clothing item</td>
+</tr>
+<tr>
+  <td>dress_id</td>
+  <td>Integer</td>
+  <td>FK (Clothing, Nullable)</td>
+  <td>Dress clothing item</td>
+</tr>
+<tr>
+  <td>outfit_path</td>
+  <td>String</td>
+  <td>Not Null</td>
+  <td>Path to generated try-on image</td>
+</tr>
+<tr>
+  <td>created_at</td>
+  <td>TIMESTAMP</td>
+  <td>Auto Timestamp</td>
+  <td>Creation time</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h3 id="325-history-table">3.2.5 <code>History</code> Table</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Field</th>
+  <th>Type</th>
+  <th>Constraints</th>
+  <th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>id</td>
+  <td>Integer</td>
+  <td>Primary Key</td>
+  <td>History record ID</td>
+</tr>
+<tr>
+  <td>user_id</td>
+  <td>Integer</td>
+  <td>Foreign Key (User)</td>
+  <td>User who viewed the item</td>
+</tr>
+<tr>
+  <td>clothing_id</td>
+  <td>Integer</td>
+  <td>Foreign Key (Clothing)</td>
+  <td>Clothing item that was viewed</td>
+</tr>
+<tr>
+  <td>created_at</td>
+  <td>TIMESTAMP</td>
+  <td>Auto Timestamp</td>
+  <td>Time of browsing</td>
+</tr>
+</tbody>
+</table>
+
+<hr />
+
+<h2 id="9-model-integration">9. Model Integration</h2>
+
+<ul>
+<li><p><strong>StableVITON</strong>: Generates try-on results using user photo + garment mask + layout</p>
+
+<ul>
+<li><p>Input: Absolute paths</p></li>
+<li><p>Output: Saved to data/combinations/user_<id>/</p></li>
+</ul></li>
+<li><p><strong>CLIP (OpenAI)</strong>: Used for text-to-image similarity in search.py</p>
+
+<ul>
+<li><p>Text queries → CLIP text embedding</p></li>
+<li><p>Compared against precomputed image_embeddings.npy</p></li>
+</ul></li>
+</ul>
+
+<h2 id="10-deployment-setup">10. Deployment &amp; Setup</h2>
+
+<ul>
+<li><strong>Backend</strong>: Flask on port <code>5000</code></li>
+<li><strong>Frontend</strong>: React on port  <code>3000</code></li>
+<li>Dev run command:</li>
+</ul>
+
+<div class="codehilite">
+<pre><span></span><code><span class="nb">cd</span><span class="w"> </span>frontend
+npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>concurrently
+npm<span class="w"> </span>run<span class="w"> </span>dev<span class="w">  </span><span class="c1"># Starts both backend and frontend</span>
+</code></pre>
+</div>
+
+<ul>
+<li>Models stored in <code>./backend/models/</code> directory</li>
+<li>Precompute <code>image_embeddings.npy</code> for fast search</li>
+</ul>
+
+<h2 id="11-team-contributions">11. Team Contributions</h2>
+
+<p>This section outlines both the overall system components and the specific responsibilities undertaken by each team member during development.</p>
+
+<h3 id="system-components-developed">System Components Developed</h3>
+
+<h4 id="backend-architecture">Backend Architecture</h4>
+
+<ul>
+<li>Flask backend initialization (<code>create_app</code>)</li>
+<li>Blueprint registration</li>
+<li>Environment-based config management (<code>config.py</code>)</li>
+<li>Database connection and migration with SQLAlchemy + Flask-Migrate</li>
+<li>Static file serving for user and clothing images</li>
+</ul>
+
+<h4 id="user-management">👤 User Management</h4>
+
+<ul>
+<li>User registration/login APIs with password hashing</li>
+<li>Form validation with WTForms</li>
+<li>Session and user info handling</li>
+<li>User image upload &amp; retrieval logic</li>
+</ul>
+
+<h4 id="closet-module">🧥 Closet Module</h4>
+
+<ul>
+<li>Clothing item listing by category</li>
+<li>Clothing detail view (with AI-generated captions)</li>
+<li>Add/Remove from virtual closet</li>
+<li>Closet limitations and constraints</li>
+</ul>
+
+<h4 id="browsing-history">📖 Browsing History</h4>
+
+<ul>
+<li>Add history (avoid duplicates, keep last 20)</li>
+<li>Retrieve recent viewed items with full details</li>
+</ul>
+
+<h4 id="caption-generation">🧠 Caption Generation</h4>
+
+<ul>
+<li>Integration with Qwen-VL and ChatGPT for captioning</li>
+<li>JSON-structured output per clothing category</li>
+<li>Fallback support for DeepSeek (deprecated)</li>
+<li>Caption formatting for frontend use</li>
+</ul>
+
+<h4 id="search-module-clip">🔍 Search Module (CLIP)</h4>
+
+<ul>
+<li>Load CLIP model and image embeddings</li>
+<li>Text query embedding and similarity scoring</li>
+<li>Search result ranking and image linking</li>
+</ul>
+
+<h4 id="virtual-try-on-stableviton">✨ Virtual Try-On (StableVITON)</h4>
+
+<ul>
+<li>Integration of StableVITON with try-on logic</li>
+<li>Handle image inputs, category selection</li>
+<li>Output saving and renaming</li>
+<li>Serve try-on result as image</li>
+</ul>
+
+<h4 id="combination-management">🧵 Combination Management</h4>
+
+<ul>
+<li>Save and retrieve try-on combinations</li>
+<li>Serve combination images</li>
+</ul>
+
+<h4 id="email-module">📩 Email Module</h4>
+
+<ul>
+<li>Send try-on image via email (Base64 decoding)</li>
+<li>SMTP configuration and exception handling</li>
+</ul>
+
+<hr />
+
+<h3 id="individual-responsibilities">👥 Individual Responsibilities</h3>
+
+<table>
+<thead>
+<tr>
+  <th>Team Member</th>
+  <th>Responsibilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Zixin Ding</strong></td>
+  <td>Backend architecture, dataset and database, caption generation, user auth, upload, closet and history logic, frontend improvement,  bug fixing, Code Report, README, Installation Manual, Final Report</td>
+</tr>
+<tr>
+  <td><strong>Zhihao Cao</strong></td>
+  <td>StableVITON try-on module, image I/O handling, bug fixing, Final Report</td>
+</tr>
+<tr>
+  <td><strong>Peini She</strong></td>
+  <td>React frontend development, combination and email routing, bug fixing, User Manual writing</td>
+</tr>
+<tr>
+  <td><h2 id="jinghao-liu-zihan-zhou-search-and-reccomendation-module-with-clip-embedding-logic-semantic-search-quality-assurance"></td>
+  <td><strong>Jinghao Liu</strong> &amp; <strong>Zihan Zhou</strong></td>
+  <td>Search and Reccomendation module with CLIP, embedding logic, semantic search, Quality Assurance</td>
+  <td></h2></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="12-appendix">12. Appendix</h2>
+
+<ul>
+<li><p>Sample SQL schema: <code>./backend/database/OVDR.sql</code></p></li>
+<li><p>Sample try-on output: <code>data/combinations/user_1/*.jpg</code></p></li>
+</ul>
+
+</body>
+</html>
