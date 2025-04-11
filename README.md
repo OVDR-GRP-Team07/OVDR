@@ -328,29 +328,20 @@ OVDR/
 <summary>📁 ./docs/ — Project documentation</summary>
 
 ```bash
-├── docs/                           # Project documentation
+├── docs/                           # Project documentation and static info website
 │   ├── JSdocs/
 │   ├── code_report.md              # Final report with structure & logic
 │   ├── api_documentation.md        # Full REST API documentation
 │   ├── installation_manual.html
 │   ├── user_manual.pdf
-│   └── Summary_of_quality_assurance.pdf  # Quality testing doc
-```
-</details>
-
----
-
-<details>
-<summary>📁 ./website/ — Static information site</summary>
-
-```bash
-├── website/                        # Static info website
+│   ├── Summary_of_quality_assurance.pdf  # Quality testing doc
 │   ├── css/
 │   ├── minutes/
 │   ├── src/
 │   └── index.html           # Presentation site
 ```
 </details>
+
 
 ---
 ## 5. Documentation
