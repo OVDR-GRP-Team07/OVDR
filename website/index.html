@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Online Virtual Dressing Room</title>
+  <link rel="stylesheet" href="./css/layui-v2.6.8/layui-v2.6.8/layui/css/layui.css">
+  <script src="./css/layui-v2.6.8/layui-v2.6.8/layui/layui.js"></script>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="icon" type="image/png" href="./src/icon.jpg" sizes="144x144">
+  <style>
+    body {
+      background: linear-gradient(135deg, #e6e6fa, #f9f0ff);
+      font-family: "Segoe UI", sans-serif;
+      color: #4b0082;
+    }
+
+    .layui-nav {
+      font-size: 16px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .nav-wrapper {
+      text-align: center;
+    }
+
+    .layui-nav-child {
+      max-height: 300px; 
+      overflow-y: auto;  
+    }
+
+    .layui-nav-item a:hover {
+      background-color: #d8b4fe !important;
+    }
+
+    .hero-title {
+      font-size: 48px;
+      font-weight: bold;
+      animation: rainbow 5s infinite linear;
+      margin-bottom: 10px;
+    }
+
+    @keyframes rainbow {
+      0% { color: #8a2be2; }
+      25% { color: #9370db; }
+      50% { color: #ba55d3; }
+      75% { color: #dda0dd; }
+      100% { color: #8a2be2; }
+    }
+
+    .intro-card {
+      margin: 40px auto;
+      max-width: 850px;
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    .project-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .download-section {
+      text-align: center;      
+      margin-top: 40px;
+    }
+
+    .download-section p {
+      font-size: 20px;
+      color: #4b0082;
+    }
+
+    .downloadbutton-purple {
+      background-color: #9b59b6;
+      color: white;
+      font-weight: bold;
+      border: none;
+      margin: 10px;
+    }
+
+    .downloadbutton-purple:hover {
+      background-color: #8e44ad;
+    }
+
+    footer {
+      margin-top: 60px;
+    }
+
+    .text-muted {
+      color: #999 !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Navigation -->
+<div class="nav-wrapper">
+<ul class="layui-nav layui-bg-purple">
+  <li class="layui-nav-item"><a href="../website/project.html">GRP Project</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">Meeting Minutes</a>
+    <dl class="layui-nav-child">
+      <dd><a href="../website/minutes/20241007.html">2024-10-07</a></dd>
+      <dd><a href="../website/minutes/20241015.html">2024-10-15</a></dd>
+      <dd><a href="../website/minutes/20241016.html">2024-10-16</a></dd>
+      <dd><a href="../website/minutes/20241023.html">2024-10-23</a></dd>
+      <dd><a href="../website/minutes/20241030.html">2024-10-30</a></dd>
+      <dd><a href="../website/minutes/20241105.html">2024-11-05</a></dd>
+      <dd><a href="../website/minutes/20241106.html">2024-11-06</a></dd>
+      <dd><a href="../website/minutes/20241120.html">2024-11-20</a></dd>
+      <dd><a href="../website/minutes/20241127.html">2024-11-27</a></dd>
+      <dd><a href="../website/minutes/20241219.html">2024-12-19</a></dd>
+      <dd><a href="../website/minutes/20250116.html">2025-01-16</a></dd>
+      <dd><a href="../website/minutes/20250221.html">2025-02-21</a></dd>
+      <dd><a href="../website/minutes/20250305.html">2025-03-05</a></dd>
+      <dd><a href="../website/minutes/20250314.html">2025-03-14</a></dd>
+      <dd><a href="../website/minutes/20250317.html">2025-03-17</a></dd>
+      <dd><a href="../website/minutes/20250321.html">2025-03-21</a></dd>
+    </dl>
+  </li> 
+  <li class="layui-nav-item"><a href="nav.html">Digital Promotional Artefact</a></li> 
+  <li class="layui-nav-item"><a href="../docs/user_manual.pdf" target="_blank">User Manual</a></li>
+  <li class="layui-nav-item">
+    <a href="javascript:;">Project Documentation</a>
+    <dl class="layui-nav-child">
+      <dd><a href="../docs/JSdocs/index.html" target="_blank">Jsdocs</a></dd>
+      <dd><a href="../docs/code_report.html" target="_blank">Code Report</a></dd>
+      <dd><a href="../docs/installation_manual.html" target="_blank">Installation Manual</a></dd>
+      <dd><a href="../docs/Summary_of_quality_assurance.pdf" target="_blank">Quality Assurance</a></dd>
+    </dl>
+  </li>
+  <li class="layui-nav-item"><a href="../website/contact.html">Contact Us</a></li>
+</ul>
+</div>
+
+<!-- Hero Section -->
+<div class="intro-card">
+  <h2 class="hero-title">Welcome to Our</h2>
+  <h1 class="hero-title">Online Virtual Dressing Room!</h1>
+  <p class="project-subtitle">[P2024-16] Online Virtual Dressing Room with Advanced Try-On and Clothing Retrieval Features</p>
+  <p class="project-subtitle">Team Name: <strong>TEAM2024.07</strong></p>
+  <p class="project-subtitle">Supervisor: <strong>Qian Zhang</strong></p>
+
+
+
+  <div class="download-section">
+    <p style="color: purple; font-weight: bold; font-size: 20px;">
+      Download our project:
+    </p>
+    <div class="downloadbu">
+      <center>
+        <a href="https://github.com/OVDR-GRP-Team07/OVDR" target="_blank" class="layui-btn layui-btn-lg downloadbutton-purple">
+          <i class="layui-icon">&#xe601;</i> GitHub Repository
+        </a>
+        <a href="https://csprojects.nottingham.edu.cn/grp-team07-gitlab/grp-team07-gitlab-work" target="_blank" class="layui-btn layui-btn-lg downloadbutton-purple">
+          <i class="layui-icon">&#xe601;</i> GitLab Repository
+        </a>
+      </center>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="py-3 my-4">
+  <p class="text-center text-muted border-top">
+    &copy; UNNC Software Engineering Group Project TEAM2024.07 |
+    <a href="./privacy.html" target="_blank" style="color:#6c63ff;">Privacy Policy</a>
+  </p>
+</footer>
+
+</body>
+</html>

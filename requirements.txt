@@ -1,0 +1,57 @@
+# --- Core Web Frameworks ---
+flask
+flask-cors
+flask-migrate
+flask_sqlalchemy
+flask_mail
+fastapi
+uvicorn
+python-multipart
+wtforms
+python-dotenv
+pymysql
+cryptography
+
+# --- ML / Vision ---
+torch==2.0.1+cu117
+torchvision==0.15.2+cu117
+torchaudio==2.0.2
+--extra-index-url https://download.pytorch.org/whl/cu117
+
+
+open-clip-torch==2.19.0
+pytorch-lightning==1.5.0
+einops
+xformers==0.0.20
+diffusers==0.20.2
+accelerate
+transformers==4.49.0
+
+# --- Image Processing ---
+opencv-python==4.7.0.72
+pillow
+scikit-image
+albumentations
+matplotlib
+basicsr
+onnxruntime
+
+# --- Data / Utils ---
+numpy==1.26.4
+pandas
+scipy
+tqdm
+cloudpickle
+fvcore
+pycocotools
+omegaconf==2.2.0
+hydra-core
+
+
+# --- Optional: Evaluation / UI ---
+clean-fid   # 如果不做图像质量评估，可删
+gradio==3.44.4   # 仅用于 demo，可删 适配 markupsafe-2.1.5 numpy-1.26.4 pillow-10.4.0
+gradio_client     # 无远程调用，可删
+spaces
+
+

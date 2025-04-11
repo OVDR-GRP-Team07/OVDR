@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2025.3.5/12 Informal Integration Meeting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    hr {
+      margin: 30px 0;
+    }
+    h2, h3, h4 {
+      color: #2e6c80;
+    }
+    ul {
+      margin-top: 0;
+    }
+    .checkmark::before {
+      content: "✔️ ";
+    }
+    .crossmark::before {
+      content: "❌ ";
+    }
+  </style>
+</head>
+<body>
+
+<h2>Meeting Minutes</h2>
+<hr>
+
+<h3>2025.3.5/12 Informal Meeting for Integration</h3>
+<p><strong>Date:</strong> Wednesday, 2025-03-05 & Wednesday, 2025-03-12</p>
+
+<p><strong>Abstract:</strong><br>
+The meeting focused on reviewing the current progress of each module, identifying integration issues, and planning the next steps. Particular attention was paid to the limitations in recommendation, search, and user interaction components.
+</p>
+
+<h4>Participants:</h4>
+<ul>
+  <li><strong>Attendance:</strong> Zhihao Cao, Zixin Ding, Peini She, Jinghao Liu</li>
+  <li><strong>Apologies of Absentee:</strong> Changhao Huang (cannot be contacted)</li>
+  <li><strong>Chairperson and Secretary:</strong> Zixin Ding</li>
+</ul>
+
+<h4>Progress Review and Issues:</h4>
+<ul>
+  <li><strong>Recommendation:</strong> Able to recommend similar items within the same category. Not yet able to recommend outfit combinations (e.g., suggesting bottoms on a top’s detail page).</li>
+  
+  <li><strong>Search:</strong>
+    <ul>
+      <li class="checkmark">Can return the best-matched item.</li>
+      <li class="crossmark">Cannot yet return multiple matching items.</li>
+      <li class="crossmark">Sorting features (e.g., by latest upload, most added to closet) are not implemented.</li>
+    </ul>
+  </li>
+
+  <li><strong>Login & Authentication:</strong>
+    <ul>
+      <li class="checkmark">Basic login/registration with username and password.</li>
+      <li class="crossmark">Email verification, CAPTCHA, and security questions are not yet integrated. Future consideration needed.</li>
+    </ul>
+  </li>
+
+  <li><strong>Image Processing:</strong>
+    <ul>
+      <li>Full-body user image preprocessing completed.</li>
+      <li>Mask generation for bottoms and dresses pending.</li>
+    </ul>
+  </li>
+
+  <li><strong>Database:</strong>
+    <ul>
+      <li>Tables such as <code>Combinations</code> (user_id, tryon_id, top_path, bottom_path, dress_path) and <code>History</code> (user_id, clothing_id) are still under construction.</li>
+      <li>Uncertainty about the necessity of a <code>Recommendations</code> table.</li>
+    </ul>
+  </li>
+
+  <li><strong>API Development:</strong>
+    <ul>
+      <li>APIs for user history and closet modules are in progress.</li>
+    </ul>
+  </li>
+
+  <li><strong>Frontend:</strong>
+    <ul>
+      <li>Implemented features: Saving try-on results locally.</li>
+      <li>In development: Item details page, search interface.</li>
+    </ul>
+  </li>
+
+  <li><strong>Testing:</strong>
+    <ul>
+      <li>Unit tests for each module are pending or in early stages.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Next Steps:</h4>
+<ul>
+  <li>Finalize database schema and begin population.</li>
+  <li>Refactor recommendation and search modules to support advanced matching logic and sorting.</li>
+  <li>Complete front-end integration with backend APIs.</li>
+  <li>Design and implement missing unit tests for all components.</li>
+</ul>
+
+</body>
+</html>

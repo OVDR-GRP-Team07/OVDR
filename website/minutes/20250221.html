@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>2025.02.21 & 02.26 Meeting</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      line-height: 1.6;
+    }
+    hr {
+      margin: 30px 0;
+    }
+    h2, h3, h4 {
+      color: #2e6c80;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #666;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    ul {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Meeting Minutes</h2>
+<hr>
+
+<h3>2025.02.21 Informal & 2025.02.26 Formal Meeting for Progress Checking</h3>
+<p><strong>Date:</strong> Sunday, 2025-02-21 & Wednesday, 2025-02-26</p>
+
+<p><strong>Abstract:</strong><br>
+This meeting reviewed feedback on the interim report, discussed task reassignment due to team member absence, and addressed technical obstacles in try-on implementation. StableVITON and PromptDresser issues were evaluated, and strategies for completion and optimization before the March deadline were confirmed.
+</p>
+
+<h4>Participants:</h4>
+<ul>
+  <li><strong>Attendance:</strong> Qian Zhang (Supervisor), Zhihao Cao, Zixin Ding, Peini She, Jinghao Liu</li>
+  <li><strong>Apologies of Absentee:</strong> Changhao Huang (cannot be contacted)</li>
+  <li><strong>Chairperson and Secretary:</strong> Zixin Ding</li>
+</ul>
+
+<h4>Main Points and Decisions:</h4>
+<ul>
+  <li>Supervisor's feedback on the interim report was collected; formatting and clarity issues need to be improved.</li>
+  <li>Changhao Huang could not be contacted. His tasks on login and recommendation modules were reassigned:
+    <ul>
+      <li><strong>Recommendation:</strong> Reassigned to Zihan Zhou and Jinghao Liu.</li>
+      <li><strong>Login Module:</strong> Reassigned to Zixin Ding.</li>
+    </ul>
+  </li>
+  <li><strong>Try-on Issues:</strong>
+    <ul>
+      <li>StableVITON can only generate tops due to dataset training focus on upper-body features.</li>
+      <li>Human parsing often excludes bottoms, merging them with the background.</li>
+      <li>PromptDresser generation is extremely slow and results in black images due to:
+        <ul>
+          <li>Insufficient local machine specs (RAM/GPU)</li>
+          <li>CUDA/library incompatibility</li>
+          <li>Large model size</li>
+        </ul>
+      </li>
+      <li>Consider using common mannequin images for faster testing instead of personal user photos.</li>
+    </ul>
+  </li>
+  <li>Supervisor agreed that dataset submission in <code>MySQL</code> database format is sufficient; no CSV export required.</li>
+  <li>Recommended contacting Dave, TA, or lab technician for testing models on lab computers or requesting a compatible workstation.</li>
+  <li>Try-on rendering performance cannot be guaranteed; the flexibility in evaluation criteria due to complexity.</li>
+  <li><strong>Next steps:</strong>
+    <ul>
+      <li>All members must finish module implementation and start integration/testing by next Wednesday.</li>
+      <li>Supervisor may schedule regular formal meetings based on progress.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Action Points:</h4>
+<ul>
+  <li>Apply for a rental server or lab PC with GPU support for StableVITON/PromptDresser testing.</li>
+  <li>Improve formatting and structure of the final report.</li>
+  <li><strong>Zhou, Liu:</strong> Responsible for recommendation module development.</li>
+  <li><strong>Ding:</strong> Takes over login module development.</li>
+  <li>Generate 200–300 virtual try-on images (each member to process their own).</li>
+  <li>Complete debugging and testing by <strong>March 20, 2025</strong>.</li>
+</ul>
+
+</body>
+</html>
