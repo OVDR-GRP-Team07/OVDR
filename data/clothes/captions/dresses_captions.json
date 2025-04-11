@@ -1,0 +1,2402 @@
+{
+    "000001_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Pale yellow",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000002_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Dark Red",
+        "pattern": "embroidered",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000003_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light blue",
+        "pattern": "floral",
+        "material": "Lace",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000004_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000005_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Bright red",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000006_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Cream",
+        "pattern": "starry",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000007_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "strapless"
+    },
+    "000008_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000009_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Teal-Black",
+        "pattern": "ombre",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000010_dress.jpg": {
+        "dresses category": "summer",
+        "color": "light blue",
+        "pattern": "geometric",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000011_dress.jpg": {
+        "dresses category": "midi",
+        "color": "coral",
+        "pattern": "solid",
+        "material": "pleated",
+        "length": "knee-length",
+        "neckline": "v-neck"
+    },
+    "000012_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "draped"
+    },
+    "000013_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Satin",
+        "length": "long",
+        "neckline": "Illusion"
+    },
+    "000014_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blush Pink",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Ruffled"
+    },
+    "000015_dress.jpg": {
+        "dresses category": "Shirtdress",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Collared"
+    },
+    "000016_dress.jpg": {
+        "dresses category": "robe",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "high"
+    },
+    "000017_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "navy blue",
+        "pattern": "embroidered",
+        "material": "silk",
+        "length": "long",
+        "neckline": "heart-shaped"
+    },
+    "000018_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000019_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000020_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000021_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Red",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000022_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Royal blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000023_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Bright Pink",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000024_dress.jpg": {
+        "dresses category": "evening",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "one-shoulder"
+    },
+    "000025_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Caramel brown",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000026_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Linen",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000027_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blush",
+        "pattern": "Lace",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000028_dress.jpg": {
+        "dresses category": "sleeveless",
+        "color": "brown beige",
+        "pattern": "animal-print",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000029_dress.jpg": {
+        "dresses category": "Shirtdress",
+        "color": "Off-white",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Collared"
+    },
+    "000030_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "pink",
+        "pattern": "checkered",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000031_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Bright yellow",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000032_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Pink white",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000033_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black and white",
+        "pattern": "floral",
+        "material": "Silk",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000034_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue Teal",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000035_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "maroon",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length",
+        "neckline": "keyhole"
+    },
+    "000036_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Pale Pink",
+        "pattern": "solid",
+        "material": "Sequined",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000037_dress.jpg": {
+        "dresses category": "Shirtdress",
+        "color": "Light blue",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Collared"
+    },
+    "000038_dress.jpg": {
+        "dresses category": "evening",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "high"
+    },
+    "000039_dress.jpg": {
+        "dresses category": "maxi",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "long",
+        "neckline": "round"
+    },
+    "000040_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "White and blue",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000041_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Royal blue",
+        "pattern": "solid",
+        "material": "Pleated",
+        "length": "long",
+        "neckline": "halter"
+    },
+    "000042_dress.jpg": {
+        "dresses category": "floral",
+        "color": "black blue",
+        "pattern": "floral",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000043_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000044_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Mint green",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000045_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black White",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000046_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Royal blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Bow"
+    },
+    "000047_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Pale green",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Collared"
+    },
+    "000048_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000049_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000050_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Off-white",
+        "pattern": "embroidered",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000051_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long",
+        "neckline": "plunge"
+    },
+    "000052_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000053_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000054_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "feathered",
+        "length": "knee-length",
+        "neckline": "illusion"
+    },
+    "000055_dress.jpg": {
+        "dresses category": "evening",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "halter"
+    },
+    "000056_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "navy blue",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000057_dress.jpg": {
+        "dresses category": "evening",
+        "color": "bright red",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "long",
+        "neckline": "off-shoulder"
+    },
+    "000058_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White Black",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000059_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "round"
+    },
+    "000060_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000061_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Peach",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000062_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Dark blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000063_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000064_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Red",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000065_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000066_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Teal",
+        "pattern": "solid",
+        "material": "Velvet",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000067_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "orange",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000068_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000069_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "keyhole"
+    },
+    "000070_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "white",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000071_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "orange and white",
+        "pattern": "solid",
+        "material": "chiffon",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000072_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "PeterPan"
+    },
+    "000073_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "white",
+        "pattern": "embroidered",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000074_dress.jpg": {
+        "dresses category": "sleeveless",
+        "color": "beige black",
+        "pattern": "geometric",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000075_dress.jpg": {
+        "dresses category": "shift",
+        "color": "white",
+        "pattern": "striped bow",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "mock"
+    },
+    "000076_dress.jpg": {
+        "dresses category": "wrap",
+        "color": "aqua blue",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000077_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "scoop"
+    },
+    "000078_dress.jpg": {
+        "dresses category": "Denim",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "length": "knee-length",
+        "neckline": "Square"
+    },
+    "000079_dress.jpg": {
+        "dresses category": "maxi",
+        "color": "teal",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "long",
+        "neckline": "round"
+    },
+    "000080_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Royal blue",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Strapless"
+    },
+    "000081_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Dark Red",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "knee-length",
+        "neckline": "Draped"
+    },
+    "000082_dress.jpg": {
+        "dresses category": "jumpsuit",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long",
+        "neckline": "crossback"
+    },
+    "000083_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Crochet",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000084_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue white",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000085_dress.jpg": {
+        "dresses category": "evening",
+        "color": "deep red",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long",
+        "neckline": "asymmetric"
+    },
+    "000086_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "Asymmetrical"
+    },
+    "000087_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multicolor",
+        "pattern": "floral",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000088_dress.jpg": {
+        "dresses category": "pencil",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000089_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Mustard yellow",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000090_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Dark Brown",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000091_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Satin",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000092_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Beige Black",
+        "pattern": "Abstract",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000093_dress.jpg": {
+        "dresses category": "graphic",
+        "color": "black white",
+        "pattern": "graphic",
+        "material": "mesh",
+        "length": "knee-length",
+        "neckline": "v-neck"
+    },
+    "000094_dress.jpg": {
+        "dresses category": "bodycon",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "scoop"
+    },
+    "000095_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Golden Yellow",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Strapless"
+    },
+    "000096_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Olive Green",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000097_dress.jpg": {
+        "dresses category": "evening",
+        "color": "pale yellow",
+        "pattern": "solid",
+        "material": "chiffon",
+        "length": "long",
+        "neckline": "illusion"
+    },
+    "000098_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light blue",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000099_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "bright pink",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000100_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Bright blue",
+        "pattern": "floral",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000101_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Peach-orange",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000102_dress.jpg": {
+        "dresses category": "wrap",
+        "color": "teal blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "cross-over"
+    },
+    "000103_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Navy blue",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000104_dress.jpg": {
+        "dresses category": "evening",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "round"
+    },
+    "000105_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Blush Pink",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Halter"
+    },
+    "000106_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Sage green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000107_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "v-neck"
+    },
+    "000108_dress.jpg": {
+        "dresses category": "sheath",
+        "color": "bright orange",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000109_dress.jpg": {
+        "dresses category": "Denim",
+        "color": "Dark blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000110_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Dark Green",
+        "pattern": "solid",
+        "material": "Wool",
+        "length": "knee-length",
+        "neckline": "Sweetheart"
+    },
+    "000111_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Light beige",
+        "pattern": "solid",
+        "material": "Knit",
+        "length": "knee-length",
+        "neckline": "Square"
+    },
+    "000112_dress.jpg": {
+        "dresses category": "day",
+        "color": "light purple",
+        "pattern": "floral",
+        "material": "chiffon",
+        "length": "knee-length",
+        "neckline": "stand-up"
+    },
+    "000113_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Black",
+        "pattern": "embroidered",
+        "material": "Knit",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000114_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Blush pink",
+        "pattern": "solid",
+        "material": "Satin",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000115_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multicolor",
+        "pattern": "floral-striped",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000116_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Royal blue",
+        "pattern": "floral",
+        "material": "Lace",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000117_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light blue",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000118_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "asymmetric"
+    },
+    "000119_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Light Gray",
+        "pattern": "solid",
+        "material": "Tulle",
+        "length": "long",
+        "neckline": "Heart"
+    },
+    "000120_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark grey",
+        "pattern": "solid",
+        "material": "jersey",
+        "length": "long",
+        "neckline": "plunge"
+    },
+    "000121_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multi-color",
+        "pattern": "solid",
+        "material": "Knit",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000122_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "jersey",
+        "length": "knee-length",
+        "neckline": "v-neck"
+    },
+    "000123_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "embellished",
+        "material": "silk",
+        "length": "long",
+        "neckline": "high"
+    },
+    "000124_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Bright Pink",
+        "pattern": "solid",
+        "material": "Satin",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000125_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "black",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000126_dress.jpg": {
+        "dresses category": "Polo",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long",
+        "neckline": "collared"
+    },
+    "000127_dress.jpg": {
+        "dresses category": "wrap",
+        "color": "black red",
+        "pattern": "floral",
+        "material": "chiffon",
+        "length": "knee-length",
+        "neckline": "v-neck"
+    },
+    "000128_dress.jpg": {
+        "dresses category": "Shirtdress",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Collared"
+    },
+    "000129_dress.jpg": {
+        "dresses category": "wrap",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000130_dress.jpg": {
+        "dresses category": "summer",
+        "color": "blue white",
+        "pattern": "floral",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "v-neck"
+    },
+    "000131_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000132_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light gray",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000133_dress.jpg": {
+        "dresses category": "shirt-dress",
+        "color": "white black",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "long",
+        "neckline": "collared"
+    },
+    "000134_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Lace",
+        "length": "knee-length",
+        "neckline": "Sweetheart"
+    },
+    "000135_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Bright Pink",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Halter"
+    },
+    "000136_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Off-white",
+        "pattern": "floral",
+        "material": "Lace",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000137_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black blue",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000138_dress.jpg": {
+        "dresses category": "asymmetrical",
+        "color": "beige black",
+        "pattern": "snake-skin",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "collared"
+    },
+    "000139_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "black",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "knee-length",
+        "neckline": "spaghetti"
+    },
+    "000140_dress.jpg": {
+        "dresses category": "evening",
+        "color": "silver",
+        "pattern": "solid",
+        "material": "satin",
+        "length": "knee-length",
+        "neckline": "draped"
+    },
+    "000141_dress.jpg": {
+        "dresses category": "Tunic",
+        "color": "Maroon and cream",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Lace-up"
+    },
+    "000142_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "black white",
+        "pattern": "leopard",
+        "material": "silk",
+        "length": "long",
+        "neckline": "halter"
+    },
+    "000143_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Dark grey",
+        "pattern": "solid",
+        "material": "Wool",
+        "length": "long",
+        "neckline": "PeterPan"
+    },
+    "000144_dress.jpg": {
+        "dresses category": "turtleneck",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "turtleneck"
+    },
+    "000145_dress.jpg": {
+        "dresses category": "ribbed",
+        "color": "olive green",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "long",
+        "neckline": "turtleneck"
+    },
+    "000146_dress.jpg": {
+        "dresses category": "evening",
+        "color": "camel",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "draped"
+    },
+    "000147_dress.jpg": {
+        "dresses category": "trench",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long",
+        "neckline": "collared"
+    },
+    "000148_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long",
+        "neckline": "strapless"
+    },
+    "000149_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "high"
+    },
+    "000150_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multicolored",
+        "pattern": "striped",
+        "material": "Shimmering",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000151_dress.jpg": {
+        "dresses category": "evening",
+        "color": "royal blue",
+        "pattern": "solid",
+        "material": "satin",
+        "length": "long",
+        "neckline": "plunge"
+    },
+    "000152_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue-gray",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Halter"
+    },
+    "000153_dress.jpg": {
+        "dresses category": "evening",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "tulle",
+        "length": "long",
+        "neckline": "high"
+    },
+    "000154_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000155_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue-black",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Ruffled"
+    },
+    "000156_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Purple",
+        "pattern": "solid",
+        "material": "Velvet",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000157_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Dark Pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Square"
+    },
+    "000158_dress.jpg": {
+        "dresses category": "knit",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000159_dress.jpg": {
+        "dresses category": "wrap",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000160_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black and white",
+        "pattern": "embroidered",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000161_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Dusty blue",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000162_dress.jpg": {
+        "dresses category": "Mini",
+        "color": "White",
+        "pattern": "Lace",
+        "material": "Cotton",
+        "length": "Knee-length",
+        "neckline": "High"
+    },
+    "000163_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "White Red",
+        "pattern": "floral",
+        "material": "Sequined",
+        "length": "knee-length",
+        "neckline": "Square"
+    },
+    "000164_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Navy blue",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000165_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "black white",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000166_dress.jpg": {
+        "dresses category": "trench",
+        "color": "purple",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "collared"
+    },
+    "000167_dress.jpg": {
+        "dresses category": "evening",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000168_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multi-color",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000169_dress.jpg": {
+        "dresses category": "tunic",
+        "color": "white black",
+        "pattern": "illustrated",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000170_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "halter"
+    },
+    "000171_dress.jpg": {
+        "dresses category": "shirt-dress",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "stand-up"
+    },
+    "000172_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "beige and black",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "knee-length",
+        "neckline": "high"
+    },
+    "000173_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "satin",
+        "length": "knee-length",
+        "neckline": "v-neck"
+    },
+    "000174_dress.jpg": {
+        "dresses category": "shirt-dress",
+        "color": "white green",
+        "pattern": "tie-dye",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "collared"
+    },
+    "000175_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "striped",
+        "material": "crepe",
+        "length": "long",
+        "neckline": "tube"
+    },
+    "000176_dress.jpg": {
+        "dresses category": "Mini",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Scalloped"
+    },
+    "000177_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Green",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000178_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blush",
+        "pattern": "ribbed",
+        "material": "Knit",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000179_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue White",
+        "pattern": "striped",
+        "material": "Knit",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000180_dress.jpg": {
+        "dresses category": "midi",
+        "color": "bright pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000181_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Purple Blue",
+        "pattern": "solid",
+        "material": "Sequined",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000182_dress.jpg": {
+        "dresses category": "asymmetrical",
+        "color": "white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "off-shoulder"
+    },
+    "000183_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Champagne",
+        "pattern": "solid",
+        "material": "Lurex",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000184_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Cobalt blue",
+        "pattern": "solid",
+        "material": "Satin",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000185_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Off-white",
+        "pattern": "solid",
+        "material": "Linen",
+        "length": "long",
+        "neckline": "Halter"
+    },
+    "000186_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Light blue",
+        "pattern": "floral",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000187_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light Green",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000188_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Blue Red",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000189_dress.jpg": {
+        "dresses category": "shirt-dress",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "collared"
+    },
+    "000190_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light green",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000191_dress.jpg": {
+        "dresses category": "Shirtdress",
+        "color": "Peach",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Collared"
+    },
+    "000192_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "blue white",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "keyhole"
+    },
+    "000193_dress.jpg": {
+        "dresses category": "blazer",
+        "color": "black",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "knee-length",
+        "neckline": "off-shoulder"
+    },
+    "000194_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Dark Red",
+        "pattern": "Diamond",
+        "material": "Lace",
+        "length": "Long",
+        "neckline": "Round"
+    },
+    "000195_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "yellow black",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "knee-length",
+        "neckline": "halter"
+    },
+    "000196_dress.jpg": {
+        "dresses category": "tunic",
+        "color": "bright orange",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000197_dress.jpg": {
+        "dresses category": "evening",
+        "color": "olive green",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "strapless"
+    },
+    "000198_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Dark gray",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000199_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "bright orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000200_dress.jpg": {
+        "dresses category": "tunic",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000201_dress.jpg": {
+        "dresses category": "summer",
+        "color": "bright pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "halter"
+    },
+    "000202_dress.jpg": {
+        "dresses category": "bodycon",
+        "color": "silver-brown",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "halter"
+    },
+    "000203_dress.jpg": {
+        "dresses category": "evening",
+        "color": "bright red",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "v-neck"
+    },
+    "000204_dress.jpg": {
+        "dresses category": "evening",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "plunge"
+    },
+    "000205_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000206_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "navy blue",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000207_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000208_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Burnt orange",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000209_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Caramel",
+        "pattern": "solid",
+        "material": "Velvet",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000210_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "halter"
+    },
+    "000211_dress.jpg": {
+        "dresses category": "evening",
+        "color": "royal blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "cowl"
+    },
+    "000212_dress.jpg": {
+        "dresses category": "jumpsuit",
+        "color": "bright red",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "stand-up"
+    },
+    "000213_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Purple multicolor",
+        "pattern": "striped",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000214_dress.jpg": {
+        "dresses category": "Midi",
+        "color": "White",
+        "pattern": "floral",
+        "material": "Lace",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000215_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "blue gold",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "knee-length",
+        "neckline": "high"
+    },
+    "000216_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Off-white",
+        "pattern": "illustrative",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000217_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black-Pink",
+        "pattern": "polka-dot",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Bow"
+    },
+    "000218_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Light blue",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000219_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Coral",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000220_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Bright blue",
+        "pattern": "solid",
+        "material": "Jersey",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000221_dress.jpg": {
+        "dresses category": "sheath",
+        "color": "red",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "crew"
+    },
+    "000222_dress.jpg": {
+        "dresses category": "evening",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "one-shoulder"
+    },
+    "000223_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "light blue",
+        "pattern": "striped",
+        "material": "chiffon",
+        "length": "knee-length",
+        "neckline": "one-shoulder"
+    },
+    "000224_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Purple",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000225_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "off-shoulder"
+    },
+    "000226_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Halter"
+    },
+    "000227_dress.jpg": {
+        "dresses category": "maxi",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long",
+        "neckline": "crew"
+    },
+    "000228_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White green",
+        "pattern": "illustrative",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000229_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Leather",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000230_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "blue purple",
+        "pattern": "geometric floral",
+        "material": "wool",
+        "length": "knee-length",
+        "neckline": "high"
+    },
+    "000231_dress.jpg": {
+        "dresses category": "cocktail",
+        "color": "navy blue",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "knee-length",
+        "neckline": "sweetheart"
+    },
+    "000232_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Orange Black",
+        "pattern": "striped",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Sweetheart"
+    },
+    "000233_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Deep Purple",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000234_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Navy blue",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000235_dress.jpg": {
+        "dresses category": "evening",
+        "color": "bright red",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "long",
+        "neckline": "round"
+    },
+    "000236_dress.jpg": {
+        "dresses category": "shift",
+        "color": "dark grey",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length",
+        "neckline": "asymmetrical"
+    },
+    "000237_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Wool",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000238_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black",
+        "pattern": "floral",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000239_dress.jpg": {
+        "dresses category": "Shift",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "Knit",
+        "length": "knee-length",
+        "neckline": "Turtleneck"
+    },
+    "000240_dress.jpg": {
+        "dresses category": "nightgown",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "v-neck"
+    },
+    "000241_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Crepe",
+        "length": "long",
+        "neckline": "Scoop"
+    },
+    "000242_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Bright Orange",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Square"
+    },
+    "000243_dress.jpg": {
+        "dresses category": "sheath",
+        "color": "white",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000244_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "striped",
+        "material": "Crepe",
+        "length": "knee-length",
+        "neckline": "Square"
+    },
+    "000245_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Sequined",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000246_dress.jpg": {
+        "dresses category": "evening",
+        "color": "bright red",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "off-shoulder"
+    },
+    "000247_dress.jpg": {
+        "dresses category": "Denim",
+        "color": "Light Blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000248_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Dark brown",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000249_dress.jpg": {
+        "dresses category": "sheath",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000250_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Peach",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Scoop"
+    },
+    "000251_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Tulle",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000252_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Beige and Blue",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Bow"
+    },
+    "000253_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark grey",
+        "pattern": "solid",
+        "material": "shiny",
+        "length": "long",
+        "neckline": "v-neck"
+    },
+    "000254_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White Peach",
+        "pattern": "floral",
+        "material": "Lace",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000255_dress.jpg": {
+        "dresses category": "Tunic",
+        "color": "Black",
+        "pattern": "floral",
+        "material": "Cotton",
+        "length": "knee-length",
+        "neckline": "Round"
+    },
+    "000256_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Teal",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Plunge"
+    },
+    "000257_dress.jpg": {
+        "dresses category": "floral",
+        "color": "blue yellow",
+        "pattern": "floral",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "ruffled"
+    },
+    "000258_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Yellow",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "Scoop"
+    },
+    "000259_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Lavender",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000260_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Dark Purple",
+        "pattern": "solid",
+        "material": "Satin",
+        "length": "long",
+        "neckline": "Plunge"
+    },
+    "000261_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multicolor",
+        "pattern": "abstract",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000262_dress.jpg": {
+        "dresses category": "tunic",
+        "color": "black white",
+        "pattern": "striped",
+        "material": "linen",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000263_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Bright red",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000264_dress.jpg": {
+        "dresses category": "maxi",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "square"
+    },
+    "000265_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Bright Pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Off-shoulder"
+    },
+    "000266_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000267_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "pleated",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000268_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Emerald green",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Sweetheart"
+    },
+    "000269_dress.jpg": {
+        "dresses category": "knit",
+        "color": "white",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length",
+        "neckline": "turtleneck"
+    },
+    "000270_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "black",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000271_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000272_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multicolor",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000273_dress.jpg": {
+        "dresses category": "evening",
+        "color": "bright red",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000274_dress.jpg": {
+        "dresses category": "evening",
+        "color": "ivory",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "draped"
+    },
+    "000275_dress.jpg": {
+        "dresses category": "evening",
+        "color": "teal blue",
+        "pattern": "striped",
+        "material": "shimmering",
+        "length": "long",
+        "neckline": "asymmetrical"
+    },
+    "000276_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "geometric",
+        "material": "silk",
+        "length": "long",
+        "neckline": "asymmetric"
+    },
+    "000277_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Off-white",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000278_dress.jpg": {
+        "dresses category": "evening",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "scoop"
+    },
+    "000279_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White",
+        "pattern": "striped",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000280_dress.jpg": {
+        "dresses category": "evening",
+        "color": "yellow",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "plunge"
+    },
+    "000281_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000282_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000283_dress.jpg": {
+        "dresses category": "evening",
+        "color": "teal green",
+        "pattern": "solid",
+        "material": "chiffon",
+        "length": "long",
+        "neckline": "sweetheart"
+    },
+    "000284_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000285_dress.jpg": {
+        "dresses category": "evening",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "halter"
+    },
+    "000286_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "lime green",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length",
+        "neckline": "V-neck"
+    },
+    "000287_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long",
+        "neckline": "v-neck"
+    },
+    "000288_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "White",
+        "pattern": "embellished",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000289_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Teal-Pink",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Sweetheart"
+    },
+    "000290_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Dark blue",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000291_dress.jpg": {
+        "dresses category": "wrap",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length",
+        "neckline": "round"
+    },
+    "000292_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Light beige",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000293_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Multicolor",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "High"
+    },
+    "000294_dress.jpg": {
+        "dresses category": "Maxi",
+        "color": "Black and Pink",
+        "pattern": "solid",
+        "material": "Tulle",
+        "length": "long",
+        "neckline": "Round"
+    },
+    "000295_dress.jpg": {
+        "dresses category": "evening",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "long",
+        "neckline": "round"
+    },
+    "000296_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Black",
+        "pattern": "embellished",
+        "material": "Silk",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000297_dress.jpg": {
+        "dresses category": "Evening",
+        "color": "Emerald green",
+        "pattern": "solid",
+        "material": "Tulle",
+        "length": "long",
+        "neckline": "V-neck"
+    },
+    "000298_dress.jpg": {
+        "dresses category": "A-line",
+        "color": "black and white",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "knee-length",
+        "neckline": "square"
+    },
+    "000299_dress.jpg": {
+        "dresses category": "evening",
+        "color": "dark red",
+        "pattern": "embroidered floral",
+        "material": "silk",
+        "length": "long",
+        "neckline": "halter"
+    },
+    "000300_dress.jpg": {
+        "dresses category": "Abaya",
+        "color": "Black white",
+        "pattern": "polka-dot",
+        "material": "Chiffon",
+        "length": "long",
+        "neckline": "V-neck"
+    }
+}

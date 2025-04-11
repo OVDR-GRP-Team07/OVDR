@@ -1,0 +1,2402 @@
+{
+    "000001_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "lavender-purple",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000002_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Teal",
+        "pattern": "floral",
+        "material": "Silk",
+        "neckline": "Stand-up",
+        "sleeve": "Long"
+    },
+    "000003_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "Maroon",
+        "pattern": "solid",
+        "material": "Polyester",
+        "neckline": "Cowl",
+        "sleeve": "Long"
+    },
+    "000004_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "beige",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000005_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000006_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Cream",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Lace",
+        "sleeve": "Long"
+    },
+    "000007_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "gray heather",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000008_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Burnt orange",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000009_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000010_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Mustard",
+        "pattern": "ribbed",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Three-quarter"
+    },
+    "000011_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Turtleneck",
+        "sleeve": "Short"
+    },
+    "000012_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Light blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000013_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Pink, White, Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000014_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000015_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000016_top.jpg": {
+        "upper cloth category": "Vest",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Textured",
+        "neckline": "V-neck",
+        "sleeve": "Sleeveless"
+    },
+    "000017_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000018_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000019_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000020_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000021_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000022_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Multicolor",
+        "pattern": "tie-dye",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000023_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Red-Peach",
+        "pattern": "striped",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000024_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "brown",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000025_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dusty pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000026_top.jpg": {
+        "upper cloth category": "Crop",
+        "color": "Neon pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000027_top.jpg": {
+        "upper cloth category": "Tunic",
+        "color": "Teal",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000028_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light purple",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000029_top.jpg": {
+        "upper cloth category": "Crop-top",
+        "color": "Red",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Sleeveless"
+    },
+    "000030_top.jpg": {
+        "upper cloth category": "Dress",
+        "color": "Black White",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000031_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Gray",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000032_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Olive green",
+        "pattern": "lace",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000033_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "peach",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000034_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Pale yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000035_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light pink",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000036_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "rust orange",
+        "pattern": "solid",
+        "material": "knit",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000037_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000038_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "pale pink",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000039_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "aqua",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000040_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Off-white",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000041_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "yellow",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000042_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Brown-Gold",
+        "pattern": "striped",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000043_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "yellow white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000044_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Cowl",
+        "sleeve": "Sleeveless"
+    },
+    "000045_top.jpg": {
+        "upper cloth category": "Camisole",
+        "color": "Teal",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Strap"
+    },
+    "000046_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "Pink",
+        "pattern": "Graphic",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000047_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light pink",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000048_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000049_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Golden Yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000050_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "neon orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000051_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Light purple",
+        "pattern": "graphic",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000052_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000053_top.jpg": {
+        "upper cloth category": "Dress",
+        "color": "Blue-gray",
+        "pattern": "striped",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Three-quarter"
+    },
+    "000054_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Lime green",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "Turtleneck",
+        "sleeve": "Short"
+    },
+    "000055_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "red white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000056_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Yellow-white",
+        "pattern": "striped",
+        "material": "Cotton",
+        "neckline": "Ruffled",
+        "sleeve": "Sleeveless"
+    },
+    "000057_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "red",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000058_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light pink",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000059_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "burnt orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000060_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Bright red",
+        "pattern": "logo",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000061_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Dark Red",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Long"
+    },
+    "000062_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000063_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dark gray",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000064_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Dark grey",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000065_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "teal",
+        "pattern": "solid",
+        "material": "knit",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000066_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Navy",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000067_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000068_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Tie-neck",
+        "sleeve": "Cap-sleeve"
+    },
+    "000069_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Black-green-white",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000070_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000071_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "pixelated",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000072_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "sage green",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000073_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "White",
+        "pattern": "graphic",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000074_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Light gray",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000075_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000076_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dark gray",
+        "pattern": "astronomical",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000077_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Navy blue",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Keyhole",
+        "sleeve": "Long"
+    },
+    "000078_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Black",
+        "pattern": "graphic",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000079_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Purple",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000080_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Light Grey",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Sleeveless"
+    },
+    "000081_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Sage green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000082_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000083_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "pink black",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000084_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Pastel",
+        "pattern": "tie-dye",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000085_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Mustard",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000086_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000087_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000088_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "embossed",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000089_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "long"
+    },
+    "000090_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "olive green",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000091_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "Keyhole",
+        "sleeve": "Long"
+    },
+    "000092_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "blue white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000093_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "bateau",
+        "sleeve": "three-quarter"
+    },
+    "000094_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "Mustard",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000095_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "High",
+        "sleeve": "Long"
+    },
+    "000096_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Purple",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000097_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "neon orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000098_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000099_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000100_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Dark blue",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Sleeveless"
+    },
+    "000101_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Bright Pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Short"
+    },
+    "000102_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black White",
+        "pattern": "striped",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000103_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "royal blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000104_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000105_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Pink Navy",
+        "pattern": "striped",
+        "material": "Knit",
+        "neckline": "Collar",
+        "sleeve": "Short"
+    },
+    "000106_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dark gray",
+        "pattern": "floral",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000107_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Brown",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000108_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Collared",
+        "sleeve": "Short"
+    },
+    "000109_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "three-quarter"
+    },
+    "000110_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "purple",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000111_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "long"
+    },
+    "000112_top.jpg": {
+        "upper cloth category": "Crop-top",
+        "color": "Multicolored",
+        "pattern": "artistic",
+        "material": "Sheer",
+        "neckline": "Off-shoulder",
+        "sleeve": "Long"
+    },
+    "000113_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Rust Brown",
+        "pattern": "striped",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000114_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Pale yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Short"
+    },
+    "000115_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Light blue",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Three-quarter"
+    },
+    "000116_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "burnt orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "mock-neck",
+        "sleeve": "short"
+    },
+    "000117_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Square",
+        "sleeve": "Sleeveless"
+    },
+    "000118_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000119_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Spandex",
+        "neckline": "Square",
+        "sleeve": "Long"
+    },
+    "000120_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Pink",
+        "pattern": "checkered",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Long"
+    },
+    "000121_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Blue white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000122_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Blue",
+        "pattern": "chain-link",
+        "material": "Polyester",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000123_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Peach",
+        "pattern": "solid",
+        "material": "Chiffon",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000124_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000125_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "lime green",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000126_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000127_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Olive",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000128_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000129_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Off-white",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Square",
+        "sleeve": "Puffed"
+    },
+    "000130_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Mustard",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000131_top.jpg": {
+        "upper cloth category": "Dress",
+        "color": "White",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "neckline": "Ruffled",
+        "sleeve": "Sleeveless"
+    },
+    "000132_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Yellow",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000133_top.jpg": {
+        "upper cloth category": "Crop",
+        "color": "Off-white",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "Square",
+        "sleeve": "Long"
+    },
+    "000134_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Dark green",
+        "pattern": "solid",
+        "material": "Velvet",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000135_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Pale pink",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000136_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000137_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000138_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Rust",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Keyhole",
+        "sleeve": "Long"
+    },
+    "000139_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Burnt orange",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000140_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy gray",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000141_top.jpg": {
+        "upper cloth category": "Top",
+        "color": "Black white",
+        "pattern": "striped",
+        "material": "Knit",
+        "neckline": "Off-shoulder",
+        "sleeve": "Sleeveless"
+    },
+    "000142_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy blue",
+        "pattern": "swan print",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000143_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Teal",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Scoop",
+        "sleeve": "Short"
+    },
+    "000144_top.jpg": {
+        "upper cloth category": "Camisole",
+        "color": "Gray",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Lace-trimmed",
+        "sleeve": "Strap"
+    },
+    "000145_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Teal",
+        "pattern": "Paisley",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000146_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Keyhole",
+        "sleeve": "Sleeveless"
+    },
+    "000147_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "teal",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000148_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Ruffled",
+        "sleeve": "Long"
+    },
+    "000149_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "purple",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000150_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Light blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000151_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Teal",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Sleeveless"
+    },
+    "000152_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Cream",
+        "pattern": "ribbed",
+        "material": "Knit",
+        "neckline": "Scoop",
+        "sleeve": "Sleeveless"
+    },
+    "000153_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000154_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Jersey",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000155_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "rust orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000156_top.jpg": {
+        "upper cloth category": "Crop-top",
+        "color": "Rainbow",
+        "pattern": "striped",
+        "material": "Synthetic",
+        "neckline": "Scoop",
+        "sleeve": "Strap"
+    },
+    "000157_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Ruffled",
+        "sleeve": "Long"
+    },
+    "000158_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "rust red",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000159_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000160_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Dark green",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000161_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Maroon",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Keyhole",
+        "sleeve": "Short"
+    },
+    "000162_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Multicolor",
+        "pattern": "floral",
+        "material": "Silk",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000163_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Bright red",
+        "pattern": "floral",
+        "material": "Lace",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000164_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000165_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black White",
+        "pattern": "striped",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000166_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000167_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Mustard",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Scoop",
+        "sleeve": "Sleeveless"
+    },
+    "000168_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Lavender",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000169_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Three-quarter"
+    },
+    "000170_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Scoop",
+        "sleeve": "Short"
+    },
+    "000171_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Black-LightBlue",
+        "pattern": "solid",
+        "material": "Polyester",
+        "neckline": "Collared",
+        "sleeve": "Short"
+    },
+    "000172_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Mustard",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Zipper",
+        "sleeve": "Long"
+    },
+    "000173_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "olive green",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000174_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "White",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000175_top.jpg": {
+        "upper cloth category": "Camisole",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Strap"
+    },
+    "000176_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000177_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Pale yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Off-shoulder",
+        "sleeve": "Long"
+    },
+    "000178_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "rust orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000179_top.jpg": {
+        "upper cloth category": "Crop-top",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000180_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Velvet",
+        "neckline": "Turtleneck",
+        "sleeve": "Three-quarter"
+    },
+    "000181_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Off-white",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Square",
+        "sleeve": "Long"
+    },
+    "000182_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Blue",
+        "pattern": "geometric",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000183_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Bright red",
+        "pattern": "graphic",
+        "material": "Jersey",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000184_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Off-shoulder",
+        "sleeve": "Long"
+    },
+    "000185_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000186_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000187_top.jpg": {
+        "upper cloth category": "Henley",
+        "color": "Blush",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000188_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "v-neck",
+        "sleeve": "short"
+    },
+    "000189_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "olive green",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000190_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Turtleneck",
+        "sleeve": "Short"
+    },
+    "000191_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000192_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000193_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Light pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Long"
+    },
+    "000194_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Bright blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000195_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "Lime green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000196_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000197_top.jpg": {
+        "upper cloth category": "Cardigan",
+        "color": "Blue",
+        "pattern": "solid",
+        "material": "Denim",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000198_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Bateau",
+        "sleeve": "Long"
+    },
+    "000199_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000200_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "long"
+    },
+    "000201_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000202_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Pink",
+        "pattern": "solid",
+        "material": "Polyester",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000203_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000204_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Black",
+        "pattern": "graphic",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000205_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "text",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000206_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000207_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "neon yellow",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "long"
+    },
+    "000208_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Grey",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000209_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "text",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000210_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "mock-neck",
+        "sleeve": "short"
+    },
+    "000211_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000212_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Bright blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000213_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "red",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000214_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "Teal",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000215_top.jpg": {
+        "upper cloth category": "Henley",
+        "color": "Gray",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000216_top.jpg": {
+        "upper cloth category": "Camisole",
+        "color": "Gray",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Sweetheart",
+        "sleeve": "Strap"
+    },
+    "000217_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000218_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000219_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000220_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Light Pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Short"
+    },
+    "000221_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000222_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "animal print",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000223_top.jpg": {
+        "upper cloth category": "Polo",
+        "color": "Dark Green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Short"
+    },
+    "000224_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000225_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "maroon",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000226_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000227_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Light Pink",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000228_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000229_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000230_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000231_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000232_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "embellished",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000233_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "mustard yellow",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "long"
+    },
+    "000234_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Navy",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000235_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000236_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy blue",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000237_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "embellished",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000238_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "burnt orange",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000239_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "gray heather",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000240_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "yellow",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000241_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dark gray",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000242_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "aqua",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000243_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Royal blue",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Ruffled",
+        "sleeve": "Pleated"
+    },
+    "000244_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Bright red",
+        "pattern": "repeated logo",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000245_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Dark blue",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Keyhole",
+        "sleeve": "Long"
+    },
+    "000246_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Drawstring",
+        "sleeve": "Three-quarter"
+    },
+    "000247_top.jpg": {
+        "upper cloth category": "Wrap",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Shiny",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000248_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Light gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000249_top.jpg": {
+        "upper cloth category": "Crop",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000250_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Three-quarter"
+    },
+    "000251_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000252_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "floral",
+        "material": "Lace",
+        "neckline": "Ruffled",
+        "sleeve": "Short"
+    },
+    "000253_top.jpg": {
+        "upper cloth category": "Crop",
+        "color": "Yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000254_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Golden Yellow",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000255_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Bow",
+        "sleeve": "Long"
+    },
+    "000256_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Green White",
+        "pattern": "striped",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000257_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "V-neck",
+        "sleeve": "short"
+    },
+    "000258_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Ruffled",
+        "sleeve": "Long"
+    },
+    "000259_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "camel",
+        "pattern": "ribbed",
+        "material": "knit",
+        "neckline": "turtleneck",
+        "sleeve": "short"
+    },
+    "000260_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000261_top.jpg": {
+        "upper cloth category": "Tunic",
+        "color": "Blush",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000262_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "graphic",
+        "material": "cotton",
+        "neckline": "scoop",
+        "sleeve": "short"
+    },
+    "000263_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000264_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Dark green",
+        "pattern": "lace",
+        "material": "Cotton",
+        "neckline": "Scoop",
+        "sleeve": "Long"
+    },
+    "000265_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "floral",
+        "material": "Lace",
+        "neckline": "Round",
+        "sleeve": "Three-quarter"
+    },
+    "000266_top.jpg": {
+        "upper cloth category": "Sweater",
+        "color": "Black",
+        "pattern": "ribbed",
+        "material": "Knit",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000267_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Black",
+        "pattern": "graphic",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000268_top.jpg": {
+        "upper cloth category": "Turtleneck",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Knit",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    },
+    "000269_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Three-quarter"
+    },
+    "000270_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Pink-Purple",
+        "pattern": "floral",
+        "material": "Chiffon",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000271_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy blue",
+        "pattern": "floral",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000272_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Burgundy",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000273_top.jpg": {
+        "upper cloth category": "Tunic",
+        "color": "Maroon",
+        "pattern": "Patchwork",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000274_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "Keyhole",
+        "sleeve": "Sleeveless"
+    },
+    "000275_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000276_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white",
+        "pattern": "textual",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000277_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Navy Blue",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000278_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Navy blue",
+        "pattern": "polka-dotted",
+        "material": "Cotton",
+        "neckline": "High",
+        "sleeve": "Long"
+    },
+    "000279_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Square",
+        "sleeve": "Long"
+    },
+    "000280_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000281_top.jpg": {
+        "upper cloth category": "Sweatshirt",
+        "color": "White",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Long"
+    },
+    "000282_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Purple",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Short"
+    },
+    "000283_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Navy blue",
+        "pattern": "fish",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000284_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000285_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "white black",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "long"
+    },
+    "000286_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "off-white",
+        "pattern": "flamingo",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000287_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Light Grey",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "Turtleneck",
+        "sleeve": "Sleeveless"
+    },
+    "000288_top.jpg": {
+        "upper cloth category": "Tank",
+        "color": "Sage green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Sleeveless"
+    },
+    "000289_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black white",
+        "pattern": "giraffe",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000290_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "long"
+    },
+    "000291_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Dark blue",
+        "pattern": "floral",
+        "material": "Lace",
+        "neckline": "High",
+        "sleeve": "Three-quarter"
+    },
+    "000292_top.jpg": {
+        "upper cloth category": "Dress",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "Collared",
+        "sleeve": "Sleeveless"
+    },
+    "000293_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "black",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "crew",
+        "sleeve": "short"
+    },
+    "000294_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "Light pink",
+        "pattern": "striped",
+        "material": "Cotton",
+        "neckline": "Round",
+        "sleeve": "Short"
+    },
+    "000295_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "pink black",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "short"
+    },
+    "000296_top.jpg": {
+        "upper cloth category": "T-shirt",
+        "color": "orange white",
+        "pattern": "striped",
+        "material": "cotton",
+        "neckline": "round",
+        "sleeve": "long"
+    },
+    "000297_top.jpg": {
+        "upper cloth category": "Camisole",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Silk",
+        "neckline": "V-neck",
+        "sleeve": "Sleeveless"
+    },
+    "000298_top.jpg": {
+        "upper cloth category": "Dress",
+        "color": "Navy blue",
+        "pattern": "floral",
+        "material": "Cotton",
+        "neckline": "Ruffled",
+        "sleeve": "Sleeveless"
+    },
+    "000299_top.jpg": {
+        "upper cloth category": "Blouse",
+        "color": "Black",
+        "pattern": "solid",
+        "material": "Cotton",
+        "neckline": "V-neck",
+        "sleeve": "Long"
+    },
+    "000300_top.jpg": {
+        "upper cloth category": "Bodysuit",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Ribbed",
+        "neckline": "Turtleneck",
+        "sleeve": "Long"
+    }
+}

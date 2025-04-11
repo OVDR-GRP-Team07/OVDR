@@ -1,0 +1,2102 @@
+{
+    "000001_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "short"
+    },
+    "000002_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000003_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000004_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000005_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000006_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000007_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000008_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000009_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000010_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "striped",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000011_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000012_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000013_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000014_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000015_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "knee-length"
+    },
+    "000016_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000017_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark black",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000018_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "white",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000019_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue",
+        "pattern": "striped",
+        "material": "denim",
+        "length": "long"
+    },
+    "000020_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue",
+        "pattern": "distressed",
+        "material": "denim",
+        "length": "long"
+    },
+    "000021_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "ankle-length"
+    },
+    "000022_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "white",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "ankle-length"
+    },
+    "000023_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "pink",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000024_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000025_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000026_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark blue",
+        "pattern": "star-printed",
+        "material": "denim",
+        "length": "long"
+    },
+    "000027_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000028_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000029_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000030_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000031_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "white",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000032_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000033_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "black",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000034_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "black",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000035_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000036_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000037_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000038_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "off-white",
+        "pattern": "floral",
+        "material": "denim",
+        "length": "long"
+    },
+    "000039_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "mustard yellow",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000040_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "distressed",
+        "material": "denim",
+        "length": "long"
+    },
+    "000041_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000042_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "striped",
+        "material": "denim",
+        "length": "long"
+    },
+    "000043_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000044_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000045_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue-white",
+        "pattern": "acid-wash",
+        "material": "denim",
+        "length": "long"
+    },
+    "000046_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000047_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000048_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000049_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "bright orange",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000050_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000051_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000052_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000053_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000054_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000055_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000056_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000057_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "olive green",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000058_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000059_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "multi-colored",
+        "pattern": "striped",
+        "material": "denim",
+        "length": "long"
+    },
+    "000060_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000061_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "brown",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000062_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000063_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000064_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000065_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "cropped"
+    },
+    "000066_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark blue",
+        "pattern": "embroidered floral",
+        "material": "denim",
+        "length": "long"
+    },
+    "000067_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000068_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue shades",
+        "pattern": "patchwork",
+        "material": "denim",
+        "length": "long"
+    },
+    "000069_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000070_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue white",
+        "pattern": "patchwork",
+        "material": "denim",
+        "length": "ankle-length"
+    },
+    "000071_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "corduroy",
+        "length": "long"
+    },
+    "000072_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "ankle-length"
+    },
+    "000073_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "gray white",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000074_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long"
+    },
+    "000075_bottom.jpg": {
+        "lower cloth category": "Pants",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long"
+    },
+    "000076_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "bright orange",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long"
+    },
+    "000077_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000078_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "rose gold",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000079_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "cropped"
+    },
+    "000080_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000081_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "bright blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000082_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "brown",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000083_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "white green",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "long"
+    },
+    "000084_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "bright red",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "cropped"
+    },
+    "000085_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000086_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000087_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    },
+    "000088_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light beige",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000089_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000090_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000091_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "camel",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    },
+    "000092_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "geometric",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000093_bottom.jpg": {
+        "lower cloth category": "Pants",
+        "color": "Light beige",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long"
+    },
+    "000094_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000095_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "red",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000096_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark red",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long"
+    },
+    "000097_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "long"
+    },
+    "000098_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark purple",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000099_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "bright yellow",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000100_bottom.jpg": {
+        "lower cloth category": "Pants",
+        "color": "Olive green",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long"
+    },
+    "000101_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "fleece",
+        "length": "long"
+    },
+    "000102_bottom.jpg": {
+        "lower cloth category": "sweatpants",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "fleece",
+        "length": "long"
+    },
+    "000103_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "burnt orange",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000104_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "knee-length"
+    },
+    "000105_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige gold",
+        "pattern": "striped",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000106_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000107_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length"
+    },
+    "000108_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark brown",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000109_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000110_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000111_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000112_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "pleated",
+        "material": "crepe",
+        "length": "knee-length"
+    },
+    "000113_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "teal blue",
+        "pattern": "solid",
+        "material": "polyester",
+        "length": "long"
+    },
+    "000114_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "tulle",
+        "length": "knee-length"
+    },
+    "000115_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000116_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "ivory",
+        "pattern": "embossed",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000117_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "golden yellow",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "knee-length"
+    },
+    "000118_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000119_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000120_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000121_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000122_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000123_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "polka-dot",
+        "material": "organza",
+        "length": "knee-length"
+    },
+    "000124_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "sparkly",
+        "material": "tulle",
+        "length": "short"
+    },
+    "000125_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "ivory",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "short"
+    },
+    "000126_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "short"
+    },
+    "000127_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "knee-length"
+    },
+    "000128_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "gray white",
+        "pattern": "plaid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000129_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000130_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "pale yellow",
+        "pattern": "pleated",
+        "material": "silk",
+        "length": "long"
+    },
+    "000131_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000132_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000133_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "yellow-orange",
+        "pattern": "plaid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000134_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "short"
+    },
+    "000135_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white",
+        "pattern": "embroidered",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000136_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "long"
+    },
+    "000137_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "rose gold",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000138_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige",
+        "pattern": "pleated",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000139_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000140_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000141_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "hot pink",
+        "pattern": "floral",
+        "material": "silk",
+        "length": "long"
+    },
+    "000142_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "short"
+    },
+    "000143_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "short"
+    },
+    "000144_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "caramel brown",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000145_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "purple black",
+        "pattern": "zebra",
+        "material": "vinyl",
+        "length": "knee-length"
+    },
+    "000146_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "pleated",
+        "material": "crepe",
+        "length": "long"
+    },
+    "000147_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "brown",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000148_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000149_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "camel",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "long"
+    },
+    "000150_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "rose gold",
+        "pattern": "solid",
+        "material": "sequined",
+        "length": "long"
+    },
+    "000151_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "lime green",
+        "pattern": "pleated",
+        "material": "chiffon",
+        "length": "long"
+    },
+    "000152_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "knee-length"
+    },
+    "000153_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "ribbed",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000154_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000155_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000156_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000157_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "medium blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000158_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white blue",
+        "pattern": "polka-dot",
+        "material": "cotton",
+        "length": "short"
+    },
+    "000159_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light beige",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000160_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000161_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    },
+    "000162_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000163_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000164_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000165_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length"
+    },
+    "000166_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "red",
+        "pattern": "striped",
+        "material": "leather",
+        "length": "short"
+    },
+    "000167_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black white",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000168_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black, white and blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000169_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "silver",
+        "pattern": "pleated",
+        "material": "metallic",
+        "length": "knee-length"
+    },
+    "000170_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000171_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000172_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "red black",
+        "pattern": "leopard",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000173_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "tulle",
+        "length": "long"
+    },
+    "000174_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright pink",
+        "pattern": "pleated",
+        "material": "silk",
+        "length": "long"
+    },
+    "000175_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "polka-dotted",
+        "material": "tulle",
+        "length": "long"
+    },
+    "000176_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark grey",
+        "pattern": "solid",
+        "material": "tulle",
+        "length": "long"
+    },
+    "000177_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000178_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "pleated",
+        "material": "silk",
+        "length": "long"
+    },
+    "000179_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white yellow",
+        "pattern": "floral polka-dot",
+        "material": "silk",
+        "length": "long"
+    },
+    "000180_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "burnt orange",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "knee-length"
+    },
+    "000181_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark brown",
+        "pattern": "quilted",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000182_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000183_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black and white",
+        "pattern": "geometric",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000184_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000185_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "long"
+    },
+    "000186_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "geometric",
+        "material": "mesh",
+        "length": "long"
+    },
+    "000187_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black blue",
+        "pattern": "geometric",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000188_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "multi-colored",
+        "pattern": "floral",
+        "material": "chiffon",
+        "length": "long"
+    },
+    "000189_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "striped",
+        "material": "lace",
+        "length": "long"
+    },
+    "000190_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000191_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000192_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "navy blue",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "long"
+    },
+    "000193_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light beige",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length"
+    },
+    "000194_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000195_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000196_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000197_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dusty pink",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000198_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000199_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "emerald green",
+        "pattern": "floral",
+        "material": "lace",
+        "length": "long"
+    },
+    "000200_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000201_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "mustard yellow",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000202_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000203_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000204_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue white",
+        "pattern": "floral",
+        "material": "silk",
+        "length": "long"
+    },
+    "000205_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "yellow black",
+        "pattern": "striped",
+        "material": "knit",
+        "length": "long"
+    },
+    "000206_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "gray",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    },
+    "000207_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "silver",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000208_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "floral",
+        "material": "silk",
+        "length": "long"
+    },
+    "000209_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black and white",
+        "pattern": "ombre",
+        "material": "pleated",
+        "length": "long"
+    },
+    "000210_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "mustard yellow",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000211_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "peach",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000212_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright blue",
+        "pattern": "pleated",
+        "material": "knit",
+        "length": "long"
+    },
+    "000213_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige",
+        "pattern": "striped",
+        "material": "knit",
+        "length": "long"
+    },
+    "000214_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright pink",
+        "pattern": "solid",
+        "material": "satin",
+        "length": "short"
+    },
+    "000215_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "brown",
+        "pattern": "solid",
+        "material": "suede",
+        "length": "knee-length"
+    },
+    "000216_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000217_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "taupe",
+        "pattern": "solid",
+        "material": "pleated",
+        "length": "long"
+    },
+    "000218_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000219_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue green",
+        "pattern": "floral",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000220_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark purple",
+        "pattern": "solid",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000221_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright blue",
+        "pattern": "floral",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000222_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000223_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "burnt orange",
+        "pattern": "solid",
+        "material": "suede",
+        "length": "long"
+    },
+    "000224_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "long"
+    },
+    "000225_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white",
+        "pattern": "embroidered floral",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000226_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "studded",
+        "material": "leather",
+        "length": "short"
+    },
+    "000227_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black green purple",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000228_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "golden yellow",
+        "pattern": "dragonfly",
+        "material": "silk",
+        "length": "long"
+    },
+    "000229_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "lime green",
+        "pattern": "solid",
+        "material": "ribbed",
+        "length": "knee-length"
+    },
+    "000230_bottom.jpg": {
+        "lower cloth category": "trousers",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000231_bottom.jpg": {
+        "lower cloth category": "trousers",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    },
+    "000232_bottom.jpg": {
+        "lower cloth category": "trousers",
+        "color": "dark grey",
+        "pattern": "checkered",
+        "material": "wool",
+        "length": "long"
+    },
+    "000233_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000234_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark green",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "long"
+    },
+    "000235_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "gray",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "long"
+    },
+    "000236_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "corduroy",
+        "length": "long"
+    },
+    "000237_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "teal blue",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    },
+    "000238_bottom.jpg": {
+        "lower cloth category": "trousers",
+        "color": "light beige",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000239_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "navy blue",
+        "pattern": "embroidered",
+        "material": "velvet",
+        "length": "knee-length"
+    },
+    "000240_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "brown",
+        "pattern": "solid",
+        "material": "suede",
+        "length": "knee-length"
+    },
+    "000241_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "striped",
+        "material": "knit",
+        "length": "knee-length"
+    },
+    "000242_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000243_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "long"
+    },
+    "000244_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "pale pink",
+        "pattern": "solid",
+        "material": "velvet",
+        "length": "knee-length"
+    },
+    "000245_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000246_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000247_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length"
+    },
+    "000248_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "yellow black",
+        "pattern": "checkered",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000249_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark brown",
+        "pattern": "pleated",
+        "material": "silk",
+        "length": "long"
+    },
+    "000250_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000251_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000252_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "red and black",
+        "pattern": "abstract",
+        "material": "pleated",
+        "length": "long"
+    },
+    "000253_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "white black",
+        "pattern": "pleated",
+        "material": "chiffon",
+        "length": "knee-length"
+    },
+    "000254_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "rust brown",
+        "pattern": "solid",
+        "material": "linen",
+        "length": "knee-length"
+    },
+    "000255_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000256_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue white",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000257_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark pink",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "long"
+    },
+    "000258_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black white",
+        "pattern": "polka-dot",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000259_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "maroon",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "knee-length"
+    },
+    "000260_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000261_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "pastel multi",
+        "pattern": "floral",
+        "material": "chiffon",
+        "length": "long"
+    },
+    "000262_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "caramel brown",
+        "pattern": "solid",
+        "material": "leather",
+        "length": "knee-length"
+    },
+    "000263_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "beige black",
+        "pattern": "solid",
+        "material": "suede",
+        "length": "knee-length"
+    },
+    "000264_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "black",
+        "pattern": "solid",
+        "material": "crepe",
+        "length": "knee-length"
+    },
+    "000265_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "pleated",
+        "material": "silk",
+        "length": "long"
+    },
+    "000266_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "bright blue",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000267_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "blue black",
+        "pattern": "plaid",
+        "material": "cotton",
+        "length": "short"
+    },
+    "000268_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "teal white",
+        "pattern": "striped",
+        "material": "silk",
+        "length": "long"
+    },
+    "000269_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "champagne",
+        "pattern": "solid",
+        "material": "silk",
+        "length": "knee-length"
+    },
+    "000270_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "black",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000271_bottom.jpg": {
+        "lower cloth category": "culottes",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000272_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000273_bottom.jpg": {
+        "lower cloth category": "Pants",
+        "color": "Light beige",
+        "pattern": "solid",
+        "material": "Cotton",
+        "length": "long"
+    },
+    "000274_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "bright blue",
+        "pattern": "striped",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000275_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000276_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light gray",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000277_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "patchwork",
+        "material": "denim",
+        "length": "short"
+    },
+    "000278_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "neon green",
+        "pattern": "snake print",
+        "material": "synthetic",
+        "length": "short"
+    },
+    "000279_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000280_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000281_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "dark gray",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000282_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000283_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000284_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000285_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000286_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "off-white",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000287_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000288_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000289_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000290_bottom.jpg": {
+        "lower cloth category": "skirt",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "knee-length"
+    },
+    "000291_bottom.jpg": {
+        "lower cloth category": "jeans",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "ankle-length"
+    },
+    "000292_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "blue shades",
+        "pattern": "patchwork",
+        "material": "denim",
+        "length": "long"
+    },
+    "000293_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "black",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000294_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light pink",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "long"
+    },
+    "000295_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "denim",
+        "length": "short"
+    },
+    "000296_bottom.jpg": {
+        "lower cloth category": "shorts",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "knee-length"
+    },
+    "000297_bottom.jpg": {
+        "lower cloth category": "trousers",
+        "color": "olive green",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000298_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "dark brown",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000299_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "light blue",
+        "pattern": "solid",
+        "material": "cotton",
+        "length": "long"
+    },
+    "000300_bottom.jpg": {
+        "lower cloth category": "pants",
+        "color": "navy blue",
+        "pattern": "solid",
+        "material": "wool",
+        "length": "long"
+    }
+}
