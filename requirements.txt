@@ -11,7 +11,7 @@ wtforms
 python-dotenv
 pymysql
 cryptography
-cv2
+
 
 # --- Data / Utils ---
 numpy==1.26.4
@@ -30,14 +30,6 @@ torchvision==0.15.2+cu117
 torchaudio==2.0.2
 --extra-index-url https://download.pytorch.org/whl/cu117
 
-open-clip-torch==2.19.0
-pytorch-lightning==1.5.0
-einops
-xformers==0.0.20
-diffusers==0.20.2
-accelerate
-transformers==4.49.0
-
 # --- Image Processing ---
 opencv-python==4.7.0.72
 pillow
@@ -46,6 +38,16 @@ albumentations
 matplotlib
 basicsr
 onnxruntime
+
+open-clip-torch==2.19.0
+pytorch-lightning==1.5.0
+einops
+xformers==0.0.20
+diffusers==0.20.2
+accelerate
+transformers==4.49.0
+
+
 
 
 # --- Optional: Evaluation / UI ---
