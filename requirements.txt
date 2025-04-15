@@ -11,13 +11,24 @@ wtforms
 python-dotenv
 pymysql
 cryptography
+cv2
+
+# --- Data / Utils ---
+numpy==1.26.4
+pandas
+scipy
+tqdm
+cloudpickle
+fvcore
+pycocotools
+omegaconf==2.2.0
+hydra-core
 
 # --- ML / Vision ---
 torch==2.0.1+cu117
 torchvision==0.15.2+cu117
 torchaudio==2.0.2
 --extra-index-url https://download.pytorch.org/whl/cu117
-
 
 open-clip-torch==2.19.0
 pytorch-lightning==1.5.0
@@ -35,17 +46,6 @@ albumentations
 matplotlib
 basicsr
 onnxruntime
-
-# --- Data / Utils ---
-numpy==1.26.4
-pandas
-scipy
-tqdm
-cloudpickle
-fvcore
-pycocotools
-omegaconf==2.2.0
-hydra-core
 
 
 # --- Optional: Evaluation / UI ---
