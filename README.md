@@ -51,6 +51,9 @@ pip install -r requirements.txt
 conda create -n StableViton python=3.10 -y
 conda activate StableVITON
 pip install -r requirements.txt
+pip install transformers==4.33.0
+pip install huggingface-hub==0.24.6
+
 ```
 
 ---
