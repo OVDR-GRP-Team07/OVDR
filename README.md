@@ -144,7 +144,7 @@ DATABASE=ovdr
 > For more information about shared team databases and access IPs, please refer to the [Database Notes](#6-database-setup--notes).
 
 ### 6 - revise the app.py (in StableVITON models) 
-'''bash
+```bash
 from preprocess.detectron2.projects.DensePose.apply_net_gradio import DensePose4Gradio
 from preprocess.humanparsing.run_parsing import Parsing
 from preprocess.openpose.run_openpose import OpenPose
@@ -362,7 +362,7 @@ image_gene = process_hd(args[0],args[1],args[2],20,False)
 out_path = save_output_image(image_gene)
 print(out_path)
 sys.exit(0)
-'''
+```
 ### 7 - Run the Application (Ensure you are in `./frontend/`)
 ```bash
 conda activate OVDR
