@@ -185,7 +185,7 @@ densepose_model_hd = DensePose4Gradio(
 category_dict = ['upperbody', 'lowerbody', 'dress']
 category_dict_utils = ['upper_body', 'lower_body', 'dresses']
 
-# #### model init >>>>
+#####model init >>>>
 config = OmegaConf.load("./configs/VITON.yaml")
 config.model.params.img_H = IMG_H
 config.model.params.img_W = IMG_W
@@ -202,7 +202,7 @@ model2.load_state_dict(torch.load("./checkpoints/VITONHD_1024.ckpt", map_locatio
 model2 = model.cuda()
 model2.eval()
 sampler2 = PLMSSampler(model2)
-# #### model init <<<<
+#####model init <<<<
 
 @spaces.GPU
 @torch.autocast("cuda")
