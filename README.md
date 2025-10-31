@@ -631,7 +631,7 @@ This project was completed by **TEAM2024.07** as part of the [P2024‑16] Online
 
 | Name                      | Role & Responsibilities                                                                                                  | Contact                        |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------|--------------------------------|
-| **Zhihao Cao**            | Group leader,frontend development, Backend architecture, StableVITON try-on module, combination generation and recording, bug fixing, Installation Manual, Final Report          | scyzc10@nottingham.edu.cn         |
+| **Zhihao Cao**            | Group leader, Frontend development, Backend architecture, PromptDresser and StableVITON/s try-on module attempt,apply and revise, combination generation and recording, bug fixing, Installation Manual, Final Report          | scyzc10@nottingham.edu.cn         |
 | **Zixin Ding**            | Backend architecture, dataset and database, caption generation, user auth, upload, closet and history logic, frontend improvement, bug fixing, Code Report, README, Installation Manual, Final Report | ssyzd4@nottingham.edu.cn         |
 | **Peini She**             | React frontend development, combination and email routing, bug fixing, User Manual writing      | scyps2@nottingham.edu.cn         |
 | **Jinghao Liu** &<br>**Zihan Zhou** | Search and Recommendation module with CLIP, embedding logic, semantic search, Quality Assurance                            | scyjl16@nottingham.edu.cn<br>scyzz15@nottingham.edu.cn |
